@@ -16,9 +16,13 @@ Technologies Used
 - CSS
 - JavaScript
 
-Content Images
+Content 
+
+Images
 - Game unit images taken by screenshot of my personal copy of Total War: Shogun 2
-- https://www.favicon-generator.org/ for Favicon image (Crossed sword image found via Bing image search)
+- https://www.favicon-generator.org/ for Favicon image 
+- Crossed sword image found via Bing image search
+- Logo image found and saved from Shutterstock
 
 
 Future Improvements
