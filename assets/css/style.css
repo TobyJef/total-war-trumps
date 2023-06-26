@@ -36,19 +36,23 @@ body {
     font-size: larger
 }
 
-.warrior-box {
+#warrior-box {
     background-color: beige;
+    box-sizing: border-box;
+    max-height: 400px;
 }
 
 .units {
     height: 300px;
-    background-color: beige;
 }
 
-/* .win-circle {
-    height: 300px;
-    width: 250px;
-} */
+#warriors {}
+
+#score-box{}
+
+.victories{}
+
+.score{}
 
 /* background colour possibilities */
 cadetblue #5f9ea0 95,
