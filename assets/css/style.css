@@ -2,6 +2,7 @@ body {
     background-color: steelblue;
     text-align: center;
     font-family: Garamond, serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large
 }
 
 /* Site Heading */
@@ -24,6 +25,25 @@ body {
     padding-left: 6px;
     padding-right: 6px;
 }
+
+#rules-box {
+    background-color: beige;
+    margin-top: 30px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font-size: larger
+}
+
+.units {
+    height: 300px;
+}
+
+/* .win-circle {
+    height: 300px;
+    width: 250px;
+} */
 
 /* background colour possibilities */
 cadetblue #5f9ea0 95,

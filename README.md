@@ -47,3 +47,7 @@ Select pages in the left hand navigation menu.
 From the source dropdown, select main branch and press save.
 Following a short delay, the deployment will have been completed and the page provides a link to the completed website
 The live link can be found here *insert live link*
+
+Bugs
+
+Validators
