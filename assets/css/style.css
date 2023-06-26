@@ -1,16 +1,13 @@
 body {
     background-color: steelblue;
     text-align: center;
+    font-family: Garamond, serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 
-
-cadetblue #5f9ea0 95,
-158,
-160 steelblue #4682b4 70,
-130,
-180 lightsteelblue #b0c4de 176,
-196,
-222 cornflowerblue #6495ed 100,
-149,
-237
+/* background colour possibilities */ 
+cadetblue #5f9ea0 95,158,160; 
+steelblue #4682b4 70,130,180;
+lightsteelblue #b0c4de 176,196,222;
+cornflowerblue #6495ed 100,149,237;
+/* */
