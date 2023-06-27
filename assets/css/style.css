@@ -36,17 +36,49 @@ body {
     font-size: larger
 }
 
+/* Game Card styling */
+
+/* poss remove warrior box
 #warrior-box {
     background-color: beige;
     box-sizing: border-box;
     max-height: 400px;
-}
+} */
 
 .units {
     height: 300px;
+    margin: 20px;
 }
 
-#warriors {}
+.selection{
+    height: 50px;
+    width: 100px;
+    margin-left: 50px;
+    margin-right: 50px
+
+#game-box{
+    box-sizing: border-box;
+    background-color: violet;
+    max-height: 500px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* poss not needed */
+/* #warriors {}
+
+.archer-button{}
+
+.samurai-button{}
+
+.spearmen-button{}
+
+.cavalry-button{} */
+
+/* Game area */
+
 
 #score-box{}
 
@@ -55,7 +87,7 @@ body {
 .score{}
 
 /* background colour possibilities */
-cadetblue #5f9ea0 95,
+/* cadetblue #5f9ea0 95,
 158,
 160;
 steelblue #4682b4 70,
@@ -66,5 +98,4 @@ lightsteelblue #b0c4de 176,
 222;
 cornflowerblue #6495ed 100,
 149,
-237;
-/* */
+237; */

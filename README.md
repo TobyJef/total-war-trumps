@@ -1,4 +1,4 @@
-Total War Trumps
+Total War: Trumps
 
 Total War Trumps is a game based on the classic game of Rock, Paper, Scissors. But given a new twist by basing your choices from the hit real time strategy game, Total War: Shogun 2. Tally your score and prove you are the superior commander against the computer by picking one of four units and see who trumps who.
 
@@ -36,9 +36,9 @@ Testing
 
   Deployment
 
-  - The site Total War Trumps was deployed to Github pages.
+  - The site Total War: Trumps was deployed to Github pages.
 
-To deploy the page on Github pages, the steps below are: 
+To deploy the page on Github pages, the steps below are as follows: 
 
 Login to Github.
 Go to the repository for this project, TobyJef/total-war-trumps.
