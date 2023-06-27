@@ -1,4 +1,7 @@
 body {
+    background-image: url("assets/images/lone-warrior.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
     background-color: steelblue;
     text-align: center;
     font-family: Garamond, serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -11,7 +14,7 @@ body {
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    max-width: 80%;
     background-color: beige;
     text-align: center;
     font-size: 22px;
@@ -30,11 +33,11 @@ body {
     box-sizing: border-box;
     background-color: beige;
     margin-top: 30px;
-    width: 85%;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    font-size: larger
+    /* font-size: larger */
 }
 
 /* Game Card styling */
@@ -55,7 +58,7 @@ body {
 }
 
 .warrior-name {
-    
+    display: inline;
 }
 
 /* .selection{
