@@ -1,5 +1,5 @@
 body {
-    background-image: url("assets/images/lone-warrior.webp");
+    background-image: url("../images/lone-warrior.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: steelblue;
@@ -19,6 +19,7 @@ body {
     text-align: center;
     font-size: 22px;
     height: 165px;
+    border-radius: 4px;
 }
 
 .logo {
@@ -37,6 +38,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+    border-radius: 4px;
     /* font-size: larger */
 }
 
@@ -50,11 +52,20 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
+    border-radius: 4px;
 }
 
 .units {
+    cursor: pointer;
     height: 250px;
+    transition: 0.1s;
+    /* display: flex;
+    justify-content: center; */
     /* margin: 30px; */
+}
+
+.units:hover {
+    transform: scale(1.1);
 }
 
 .warrior-name {
@@ -68,20 +79,21 @@ body {
     margin-right: 65px;
 } */
 
-button{
-   border: none;
-   margin-left: auto;
-   margin-right: auto;
-   background-color: lightsteelblue;
+button {
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightsteelblue;
 }
 
-#game-box{
+#game-box {
     box-sizing: border-box;
     background-color: violet;
     max-width: 85%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
+    border-radius: 4px;
 }
 
 
@@ -99,17 +111,21 @@ button{
 /* Game area */
 
 
-#score-box{
+#score-box {
     display: inline;
+}
+
+.players {
+    width: 50%;
 }
 
 #player-score {}
 
 #cpu-score {}
 
-.result{}
+.result {}
 
-.score{}
+.score {}
 
 /* background colour possibilities */
 /* cadetblue #5f9ea0 95,
