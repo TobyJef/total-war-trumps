@@ -15,7 +15,11 @@ const scoreBox = document.getElementById("score-box");
 // Result message
 const result = document.getElementByClassName("result");
 
-
+// Game cards
+const archer = document.getElementById("archer-button")
+const samurai = document.getElementById("samurai-button")
+const spearmen = document.getElementById("spearmen-button")
+const cavalary = document.getElementById("cavalry-button")
 
 
 // let playGame = confirm("Are you ready to defend your Kingdom?");
