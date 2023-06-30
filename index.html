@@ -33,41 +33,46 @@
             Spearmen.</p>
         <p>Use Yari Spearmen to hold off charging Cavalry. Or close the gap against far away Archers with a Cavalry
             attack.</p>
+        <p>Best your rival over Five Battles, to maintain your dynasty or face the ultimate punishment.</p> 
         <p>Can you defend your Kingdom?</p>-
-        - best out of 3 or 5 if possible?
-        - poss additional txt before defend your kingdom p tag - best your opponent in battle to maintain your dynasty
-        or face the ultimate punishment.
     </div>
 
-
+    <!-- Player name input-->
     <form>
-        <div class="name">
+        <div class="name-input">
             <label for="name">Name:</label>
-            <input id="name" type="text" name="name" required>
+            <input id="player-name" type="text" name="name" required>
         </div>
     </form>
     <p id="name-result"></p>
 
+    <!-- Player win/loss message -->
+    <div class ="result">
+        <p>Acher defeats Samurai. You win!</p>
+    </div>
 
     <!-- Player game choices -->
-    <div id="game-box">
-        <div id="warrior-box">
+    game area
+    class="game-area" id="game-box"
+        class="warrior-name" id="warrior-box">
             <h2>Choose your Warrior</h2>
-            <div class="warrior-name">
+        
                 <p>Archer</p>
                 <p>Samurai</p>
                 <p>Spearmen</p>
                 <p>Cavalry</p>
-            </div>
 
-        <div class="results">
+
+        class="results">
             <p>Archers defeats Samurai</p>
             <p>Samurai defeats Spearmen</p>
             <p>Spearmen defeats Cavalry</p>
             <p>Cavalry defeats Archers</p>
-        </div>
+            
+        
 
-            <div id="warriors" class="user-choice">
+
+            id="warriors" class="user-choice">
                 <button type="button" class="selection" id="archer-button" data-selection="archer">
                     <img class="units" src="assets/images/samurai-archer.webp"
                         alt="picture card of a japanese archer"></button>
@@ -80,20 +85,19 @@
                 <button type="button" class="selection" id="cavalry-button" data-selection="cavalry">
                     <img class="units" src="assets/images/samurai-cavalry.webp"
                         alt="picture card of japanese cavalry"></button>
-            </div>
-        </div>
+    
 
-        <div>game area</div>
-        <div id="score-box">
-            <div id="player" class="players">
+        
+    id="score-box">
+            id="player" class="players">
                 <h3>Glorius Shogun Victories: </h3>
-            </div>
-            <div id="cpu" class="players">
+            
+            id="cpu" class="players">
                 <h3>Dishonourable Daimyo Victories: </h3>
-            </div>
+            
             <span id="player-score">0</span>:<span id="cpu-score">0</span>
-        </div>
-    </div>
+        
+    
 
 
     if able to make game best out of 3 or 5,
