@@ -21,20 +21,32 @@ const samurai = document.getElementById("samurai-button")
 const spearmen = document.getElementById("spearmen-button")
 const cavalry = document.getElementById("cavalry-button")
 
-// Game card event listeners
-archer.addEventListener('click', function(){
-    console.log("archer")
-})
-samurai.addEventListener('click', function(){
-    console.log("samurai")
-})
-spearmen.addEventListener('click', function(){
-    console.log("spearmen")
-})
-cavalry.addEventListener('click', function(){
-    console.log("cavalry")
-})
 
+
+
+
+
+function game(playerChoice){
+    console.log (" " + playerChoice);
+}
+
+// Game card event listeners
+function battle(){
+    archer.addEventListener('click', function(){
+        game("archer");
+    })
+    samurai.addEventListener('click', function(){
+        game("samurai");
+    })
+    spearmen.addEventListener('click', function(){
+        game("spearmen");
+    })
+    cavalry.addEventListener('click', function(){
+        game("cavalry");
+    })
+}
+
+battle();
 
 
 // function makeSelection(selection) {
