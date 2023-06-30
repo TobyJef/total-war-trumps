@@ -5,9 +5,21 @@
 
 // });
 
+// Player and Computer scores
+const playerScore = 0;
+const playerScore = document.getElementById("player_score");
+const cpuScore = 0;
+const cpuScore = document.getElementById("cpu_score");
+const scoreBox = document.getElementById("score-box");
+
+// Result message
+const result = document.getElementByClassName("result");
+
+
+
 
 // let playGame = confirm("Are you ready to defend your Kingdom?");
-if (playGame) {
+if (playGame) {}
 
 
 
@@ -69,8 +81,6 @@ if (playGame) {
 
 // const winResult = 'Glorious Victory!';
 // const lossResult = 'Shameful Defeat';
-
-// function runGame() { }
 
 // Random number generator used to generate cpu choice
 
