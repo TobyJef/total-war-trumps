@@ -100,6 +100,12 @@ button {
 }
 
 
+.warrior-name {
+    font-weight: bold;
+    word-spacing: 75px;
+    margin-bottom: 15px;
+}
+
 
 
 /* Score area styling */
