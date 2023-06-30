@@ -6,24 +6,46 @@
 // });
 
 // Player and Computer scores
-const playerScore = 0;
+const playerScoreCounter = 0;
 const playerScore = document.getElementById("player_score");
-const cpuScore = 0;
+const cpuScoreCounter = 0;
 const cpuScore = document.getElementById("cpu_score");
 const scoreBox = document.getElementById("score-box");
 
 // Result message
-const result = document.getElementByClassName("result");
+const result = document.getElementsByClassName("result");
 
 // Game cards
 const archer = document.getElementById("archer-button")
 const samurai = document.getElementById("samurai-button")
 const spearmen = document.getElementById("spearmen-button")
-const cavalary = document.getElementById("cavalry-button")
+const cavalry = document.getElementById("cavalry-button")
+
+// Game card event listeners
+archer.addEventListener('click', function(){
+    console.log("archer")
+})
+samurai.addEventListener('click', function(){
+    console.log("samurai")
+})
+spearmen.addEventListener('click', function(){
+    console.log("spearmen")
+})
+cavalry.addEventListener('click', function(){
+    console.log("cavalry")
+})
+
+
+
+// function makeSelection(selection) {
+//     console.log(selection);
+// }
+
+
 
 
 // let playGame = confirm("Are you ready to defend your Kingdom?");
-if (playGame) {}
+// if (playGame) {}
 
 
 
@@ -50,22 +72,10 @@ if (playGame) {}
 
     // }
 
-    // let archerButton = document.getElementById('archer-button');
-    // archerButton.addEventListener('click', playerChoice);
-    // let samuraiButton = document.getElementById('samurai-button');
-    // samuraiButton.addEventListener('click', playerChoice);
-    // let spearmenButton = document.getElementById('spearmen-button');
-    // spearmenButton.addEventListener('click', playerChoice);
-    // let cavalryButton = document.getElementById('cavalry-button');
-    // cavalryButton.addEventListener('click', playerChoice);
 
 
-    // function makeSelection(selection) {
-    //     console.log(selection);
-    // }
 
-
-    // Player and CPU choice selection
+ // Player and CPU choice selection
 
 // const playerChoiceDisplay = document.getElementById('player-choice');
 // const cpuChoiceDisplay = document.getElementById('cpu-choice');
