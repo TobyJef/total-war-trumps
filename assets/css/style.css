@@ -1,3 +1,4 @@
+
 body {
     background-image: url("../images/lone-warrior.webp");
     background-size: cover;
@@ -5,7 +6,7 @@ body {
     background-color: steelblue;
     text-align: center;
     font-family: Garamond, serif, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: large
+    font-size: large;
 }
 
 /* Site Heading */
@@ -29,6 +30,8 @@ body {
     padding-left: 6px;
     padding-right: 6px;
 }
+
+/* Game backstory and rules */
 
 #rules-box {
     box-sizing: border-box;
@@ -68,9 +71,9 @@ body {
     transform: scale(1.1);
 }
 
-.warrior-name {
+/* .warrior-name {
     display: inline;
-}
+} */
 
 /* .selection{
     height: 50px;
@@ -88,13 +91,31 @@ button {
 
 #game-box {
     box-sizing: border-box;
-    background-color: violet;
+    background-color: beige;
     max-width: 85%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
     border-radius: 4px;
 }
+
+
+
+
+/* Score area styling */
+
+#score-box {
+    background-color: white;
+    border: 2px solid black;
+    max-width: 85%;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+
+
 
 
 /* poss not needed */
@@ -109,11 +130,6 @@ button {
 .cavalry-button{} */
 
 /* Game area */
-
-
-#score-box {
-    display: inline;
-}
 
 .players {
     width: 50%;

@@ -6,10 +6,10 @@
 // });
 
 
-let playGame = confirm("Are you ready to defend your Kingdom?");
+// let playGame = confirm("Are you ready to defend your Kingdom?");
 if (playGame) {
 
-} else {}
+
 
 
     // function getFormDetails(event) {
