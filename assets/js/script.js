@@ -13,7 +13,7 @@ const cpuScore = document.getElementById("cpu-score");
 const scoreBox = document.getElementById("score-box");
 
 // Result message
-const result = document.getElementsByClassName("result");
+var result = document.getElementsByClassName("result");
 
 // Game cards
 const archer = document.getElementById("archer-button");
@@ -117,13 +117,15 @@ function game(playerChoice) {
     console.log("cpuChoice => " + cpuChoice);
 }
 
-function victory() {
+function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
     cpuScore.innerHTML = cpuScoreCounter;
+    result.innerHTML = playerChoice + " Defeats " + cpuChoice + ". You win";
     console.log("you win");
     console.log(playerScoreCounter);
 }
+
 
 function loss() {
     cpuScoreCounter++;
@@ -133,6 +135,8 @@ function loss() {
 }
 
 function draw() { }
+
+
 // Victory conditions
 
 // result = 'Glorious Victory!';
@@ -142,29 +146,6 @@ function draw() { }
 
 // resultDisplay.innerHTML = result;
 
-
-
-
-
-
-
-
-
-// let playGame = confirm("Are you ready to defend your Kingdom?");
-// if (playGame) {}
-
-
-
-
-    // function getFormDetails(event) {
-
-    //     event.preventDefault();
-
-    //     let name = document.getElementById('name');
-    //     console.log('name');
-
-    //     document.getElementById('name-result').textContent = name.value;
-    // }
 
     // function playerChoice(event) {
     //     if (playerChoice = archerButton)
@@ -177,7 +158,6 @@ function draw() { }
     //         console.log('You have chosen Cavalry');
 
     // }
-
 
 
 
@@ -207,3 +187,20 @@ function draw() { }
 // const lossResult = 'Shameful Defeat';
 
 // 
+
+
+
+
+// let playGame = confirm("Are you ready to defend your Kingdom?");
+// if (playGame) {}
+
+    // function getFormDetails(event) {
+
+    //     event.preventDefault();
+
+    //     let name = document.getElementById('name');
+    //     console.log('name');
+
+    //     document.getElementById('name-result').textContent = name.value;
+    // }
+
