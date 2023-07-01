@@ -50,6 +50,17 @@ function cpuCardPick() {
 // Player choice function
 function game(playerChoice) {
     const cpuChoice = cpuCardPick();
+    if (cpuChoice === playerChoice) {
+        console.log("draw");
+    }
+
+    if (cpuChoice === 'archer' && playerChoice === 'spearmen') {
+        console.log("draw");
+    }
+
+    if (playerChoice === 'archer' && cpuChoice === 'spearmen') {
+        console.log("draw");
+    }
 
     console.log("playerChoice => " + playerChoice);
     console.log("cpuChoice => " + cpuChoice);
@@ -58,59 +69,54 @@ function game(playerChoice) {
 
 // Victory conditions
 
-function decideVictory(playerChoice, cpuChoice) {
-    if (cpuCardPick === playerChoice) {
-        result = 'Draw';
-        console.log("draw");
-    }
-
-    if (cpuCardPick === 'archer' && playerChoice === 'spearmen') {
-        result ='Draw'
-    }
-
-    if (cpuCardPick === 'samurai' && playerChoice === 'cavalry'){
-        result = 'Draw'
-    }
 
 
-    if (cpuCardPick === 'archer' && playerChoice === 'samurai') {
-        result = 'Shameful Defeat';
-        console.log("player loss");
-    }
+// if (cpuCardPick === 'archer' && playerChoice === 'spearmen') {
+//     result = 'Draw';
+// }
 
-    if (cpuChoice === 'samurai' && playerChoice === 'spearmen') {
-        result = 'Shameful Defeat';
-        console.log("player loss");
-    }
+// if (cpuCardPick === 'samurai' && playerChoice === 'cavalry') {
+//     result = 'Draw';
+// }
 
-    if (cpuChoice === 'spearmen' && playerChoice === 'cavalry') {
-        result = 'Shameful Defeat';
-        console.log("player loss");
-    }
+// if (cpuCardPick === 'archer' && playerChoice === 'samurai') {
+//     result = 'Shameful Defeat';
+//     console.log("player loss");
+// }
 
-    if (cpuChoice === 'cavalry' && playerChoice === 'archer') {
-        result = 'Shameful Defeat';
-        console.log("player loss");
-    }
-    if (cpuChoice === 'samurai' && playerChoice === 'archer') {
-        result = 'Glorious Victory!';
-        console.log("player win");
-    }
-    if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
-        result = 'Glorious Victory!';
-        console.log("player win");
-    }
-    if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
-        result = 'Glorious Victory!';
-        console.log("player win");
-    }
-    if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
-        result = 'Glorious Victory!';
-        console.log("player win");
-    }
+// if (cpuChoice === 'samurai' && playerChoice === 'spearmen') {
+//     result = 'Shameful Defeat';
+//     console.log("player loss");
+// }
 
-    resultDisplay.innerHTML = result;
-}
+// if (cpuChoice === 'spearmen' && playerChoice === 'cavalry') {
+//     result = 'Shameful Defeat';
+//     console.log("player loss");
+// }
+
+// if (cpuChoice === 'cavalry' && playerChoice === 'archer') {
+//     result = 'Shameful Defeat';
+//     console.log("player loss");
+// }
+// if (cpuChoice === 'samurai' && playerChoice === 'archer') {
+//     result = 'Glorious Victory!';
+//     console.log("player win");
+// }
+// if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
+//     result = 'Glorious Victory!';
+//     console.log("player win");
+// }
+// if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
+//     result = 'Glorious Victory!';
+//     console.log("player win");
+// }
+// if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
+//     result = 'Glorious Victory!';
+//     console.log("player win");
+// }
+
+// resultDisplay.innerHTML = result;
+
 
 
 
