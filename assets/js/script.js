@@ -52,43 +52,48 @@ function cpuCardPick() {
 function game(playerChoice) {
     const cpuChoice = cpuCardPick();
     if (cpuChoice === playerChoice) {
+        draw();
         console.log("draw");
     }
 
     if (cpuChoice === 'archer' && playerChoice === 'spearmen') {
+        draw();
         console.log("draw");
     }
 
     if (playerChoice === 'archer' && cpuChoice === 'spearmen') {
+        draw();
         console.log("draw");
     }
 
     if (cpuChoice === 'samurai' && playerChoice === 'cavalry') {
+        draw();
         console.log("draw");
     }
 
     if (playerChoice === 'samurai' && cpuChoice === 'cavalry') {
+        draw();
         console.log("draw");
     }
 
 
     if (cpuChoice === 'archer' && playerChoice === 'samurai') {
-
+        loss();
         console.log("player loss");
     }
 
     if (cpuChoice === 'samurai' && playerChoice === 'spearmen') {
-
+        loss();
         console.log("player loss");
     }
 
     if (cpuChoice === 'spearmen' && playerChoice === 'cavalry') {
-
+        loss();
         console.log("player loss");
     }
 
     if (cpuChoice === 'cavalry' && playerChoice === 'archer') {
-
+        loss();
         console.log("player loss");
     }
     if (cpuChoice === 'samurai' && playerChoice === 'archer') {
@@ -120,7 +125,12 @@ function victory() {
     console.log(playerScoreCounter);
 }
 
-function loss() { }
+function loss() {
+    cpuScoreCounter++;
+    cpuScore.innerHTML = cpuScoreCounter;
+    console.log("you loose");
+    console.log(cpuScoreCounter);
+}
 
 function draw() { }
 // Victory conditions
