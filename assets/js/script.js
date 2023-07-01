@@ -7,9 +7,9 @@
 
 // Player and Computer scores
 var playerScoreCounter = 0;
-const playerScore = document.getElementById("player_score");
+const playerScore = document.getElementById("player-score");
 var cpuScoreCounter = 0;
-const cpuScore = document.getElementById("cpu_score");
+const cpuScore = document.getElementById("cpu-score");
 const scoreBox = document.getElementById("score-box");
 
 // Result message
@@ -92,19 +92,19 @@ function game(playerChoice) {
         console.log("player loss");
     }
     if (cpuChoice === 'samurai' && playerChoice === 'archer') {
-        victory;
+        victory();
         console.log("player win");
     }
     if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
-        victory;
+        victory();
         console.log("player win");
     }
     if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
-        victory;
+        victory();
         console.log("player win");
     }
     if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
-        victory;
+        victory();
         console.log("player win");
     }
 
