@@ -1,4 +1,3 @@
-
 body {
     background-image: url("../images/lone-warrior.webp");
     background-size: cover;
@@ -15,7 +14,7 @@ body {
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    max-width: 80%;
+    max-width: 70%;
     background-color: beige;
     text-align: center;
     font-size: 22px;
@@ -27,8 +26,8 @@ body {
     height: 95px;
     position: relative;
     top: 35px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 /* Game backstory and rules */
