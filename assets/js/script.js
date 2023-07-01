@@ -26,12 +26,6 @@ function game(playerChoice) {
     console.log(" " + playerChoice);
 }
 
-// CPU choice function
-function cpuChoice() {
-    const choices = ['archer', 'samurai', 'spearmen', 'cavalry'];
-    console.log(Math.random());
-}
-
 // Game card event listeners
 function battle() {
     archer.addEventListener('click', function () {
@@ -49,6 +43,47 @@ function battle() {
 }
 
 battle();
+
+
+// CPU choice function
+function cpuCardPick() {
+    const cpuChoices = ['archer', 'samurai', 'spearmen', 'cavalry'];
+    const randomNumber = Math.floor(Math.random() * 4);
+    return cpuChoices[randomNumber];
+}
+console.log(cpuCardPick());
+// Random number generator used to generate cpu choice
+
+
+function generateCpuChoice() {
+
+
+    if (randomNumber === 1) {
+        cpuChoice = 'archer';
+    }
+
+    if (randomNumber === 2) {
+        cpuChoice = 'samurai';
+    }
+
+    if (randomNumber === 3) {
+        cpuChoice = 'spearmen';
+    }
+
+    if (randomNumber === 4) {
+        cpuChoice = 'cavalry';
+    }
+
+    cpuChoiceDisplay.innerHTML = cpuChoice;
+}
+
+
+
+
+
+
+
+
 
 
 // function makeSelection(selection) {
@@ -110,30 +145,7 @@ battle();
 // const winResult = 'Glorious Victory!';
 // const lossResult = 'Shameful Defeat';
 
-// Random number generator used to generate cpu choice
 
-
-// function generateCpuChoice() {
-//     const randomNumber = Math.floor(Math.random() * 4) + 1;
-
-//     if (randomNumber === 1) {
-//         cpuChoice = 'archer';
-//     }
-
-//     if (randomNumber === 2) {
-//         cpuChoice = 'samurai';
-//     }
-
-//     if (randomNumber === 3) {
-//         cpuChoice = 'spearmen';
-//     }
-
-//     if (randomNumber === 4) {
-//         cpuChoice = 'cavalry';
-//     }
-
-//     cpuChoiceDisplay.innerHTML = cpuChoice;
-// }
 
 // // Victory conditions
 
