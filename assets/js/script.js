@@ -21,13 +21,6 @@ const samurai = document.getElementById("samurai-button");
 const spearmen = document.getElementById("spearmen-button");
 const cavalry = document.getElementById("cavalry-button");
 
-// Player choice function
-function game(playerChoice) {
-    const cpuChoice = cpuCardPick();
-    console.log("playerChoice => " + playerChoice);
-    console.log("cpuChoice => " + cpuChoice);
-}
-
 // Game card event listeners
 function battle() {
     archer.addEventListener('click', function () {
@@ -46,51 +39,82 @@ function battle() {
 
 battle();
 
-
+// Random number generator used to generate cpu choice from array of game cards
 // CPU choice function
 function cpuCardPick() {
     const cpuChoices = ['archer', 'samurai', 'spearmen', 'cavalry'];
     const randomNumber = Math.floor(Math.random() * 4);
     return cpuChoices[randomNumber];
 }
-console.log(cpuCardPick());
-// Random number generator used to generate cpu choice
+
+// Player choice function
+function game(playerChoice) {
+    const cpuChoice = cpuCardPick();
+
+    console.log("playerChoice => " + playerChoice);
+    console.log("cpuChoice => " + cpuChoice);
+}
 
 
-function generateCpuChoice() {
+// Victory conditions
 
-
-    if (randomNumber === 1) {
-        cpuChoice = 'archer';
+function decideVictory(playerChoice, cpuChoice) {
+    if (cpuCardPick === playerChoice) {
+        result = 'Draw';
+        console.log("draw");
     }
 
-    if (randomNumber === 2) {
-        cpuChoice = 'samurai';
+    if (cpuCardPick === 'archer' && playerChoice === 'spearmen') {
+        result ='Draw'
     }
 
-    if (randomNumber === 3) {
-        cpuChoice = 'spearmen';
+    if (cpuCardPick === 'samurai' && playerChoice === 'cavalry'){
+        result = 'Draw'
     }
 
-    if (randomNumber === 4) {
-        cpuChoice = 'cavalry';
+
+    if (cpuCardPick === 'archer' && playerChoice === 'samurai') {
+        result = 'Shameful Defeat';
+        console.log("player loss");
     }
 
-    cpuChoiceDisplay.innerHTML = cpuChoice;
+    if (cpuChoice === 'samurai' && playerChoice === 'spearmen') {
+        result = 'Shameful Defeat';
+        console.log("player loss");
+    }
+
+    if (cpuChoice === 'spearmen' && playerChoice === 'cavalry') {
+        result = 'Shameful Defeat';
+        console.log("player loss");
+    }
+
+    if (cpuChoice === 'cavalry' && playerChoice === 'archer') {
+        result = 'Shameful Defeat';
+        console.log("player loss");
+    }
+    if (cpuChoice === 'samurai' && playerChoice === 'archer') {
+        result = 'Glorious Victory!';
+        console.log("player win");
+    }
+    if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
+        result = 'Glorious Victory!';
+        console.log("player win");
+    }
+    if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
+        result = 'Glorious Victory!';
+        console.log("player win");
+    }
+    if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
+        result = 'Glorious Victory!';
+        console.log("player win");
+    }
+
+    resultDisplay.innerHTML = result;
 }
 
 
 
 
-
-
-
-
-
-
-// function makeSelection(selection) {
-//     console.log(selection);
-// }
 
 
 
@@ -126,76 +150,6 @@ function generateCpuChoice() {
 
 
 
- // Player and CPU choice selection
-
-// const playerChoiceDisplay = document.getElementById('player-choice');
-// const cpuChoiceDisplay = document.getElementById('cpu-choice');
-// const resultDisplay = document.getElementsByClassName('score');
-// const playerSelection = document.getElementsByClassName('selection');
-
-// let playerChoice;
-
-// playerSelection.forEach(playerSelection => playerSelection.addEventListener('click', (e) => {
-//     playerChoice = e.target.id;
-//     playerChoiceDisplay.innerHTML = playerChoice;
-// }));
-
-// const playerChoiceDisplay;
-// const cpuChoiceDisplay;
-// getResult;
-
-// const winResult = 'Glorious Victory!';
-// const lossResult = 'Shameful Defeat';
-
-
-
-// // Victory conditions
-
-// function decideVictory(playerChoice, cpuChoice) {
-//     if (cpuChoice === playerChoice) {
-//         result = 'Draw';
-
-//     }
-
-//     if (cpuChoice === 'archer' && playerChoice === 'samurai') {
-//         result = 'Shameful Defeat';
-//         console.log(loss);
-//     }
-
-//     if (cpuChoice === 'samurai' && playerChoice === 'spearmen') {
-//         result = 'Shameful Defeat';
-//         console.log(loss);
-//     }
-
-//     if (cpuChoice === 'spearmen' && playerChoice === 'cavalry') {
-//         result = 'Shameful Defeat';
-//         console.log(loss);
-//     }
-
-//     if (cpuChoice === 'cavalry' && playerChoice === 'archer') {
-//         result = 'Shameful Defeat';
-//         console.log(loss);
-//     }
-//     if (cpuChoice === 'samurai' && playerChoice === 'archer') {
-//         result = 'Glorious Victory!';
-//         console.log(win);
-//     }
-//     if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
-//         result = 'Glorious Victory!';
-//         console.log(win);
-//     }
-//     if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
-//         result = 'Glorious Victory!';
-//         console.log(win);
-//     }
-//     if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
-//         result = 'Glorious Victory!';
-//         console.log(win);
-//     }
-
-//     resultDisplay.innerHTML = result;
-// }
-
 // Display Outcome function - best out of 5 vs cpu
 
 // function displayOutcome() {
@@ -217,5 +171,8 @@ function generateCpuChoice() {
 
 
 // }
+
+// const winResult = 'Glorious Victory!';
+// const lossResult = 'Shameful Defeat';
 
 // 
