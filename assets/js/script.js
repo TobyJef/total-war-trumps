@@ -6,9 +6,9 @@
 // });
 
 // Player and Computer scores
-const playerScoreCounter = 0;
+var playerScoreCounter = 0;
 const playerScore = document.getElementById("player_score");
-const cpuScoreCounter = 0;
+var cpuScoreCounter = 0;
 const cpuScore = document.getElementById("cpu_score");
 const scoreBox = document.getElementById("score-box");
 
@@ -48,6 +48,7 @@ function cpuCardPick() {
 }
 
 // Player choice function
+// If statements
 function game(playerChoice) {
     const cpuChoice = cpuCardPick();
     if (cpuChoice === playerChoice) {
@@ -91,19 +92,19 @@ function game(playerChoice) {
         console.log("player loss");
     }
     if (cpuChoice === 'samurai' && playerChoice === 'archer') {
-
+        victory;
         console.log("player win");
     }
     if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
-
+        victory;
         console.log("player win");
     }
     if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
-
+        victory;
         console.log("player win");
     }
     if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
-
+        victory;
         console.log("player win");
     }
 
@@ -111,7 +112,17 @@ function game(playerChoice) {
     console.log("cpuChoice => " + cpuChoice);
 }
 
+function victory() {
+    playerScoreCounter++;
+    playerScore.innerHTML = playerScoreCounter;
+    cpuScore.innerHTML = cpuScoreCounter;
+    console.log("you win");
+    console.log(playerScoreCounter);
+}
 
+function loss() { }
+
+function draw() { }
 // Victory conditions
 
 // result = 'Glorious Victory!';
