@@ -62,18 +62,20 @@ function game(playerChoice) {
         console.log("draw");
     }
 
+    if (cpuChoice === 'samurai' && playerChoice === 'cavalry') {
+        console.log("draw");
+    }
+
+    if (playerChoice === 'samurai' && cpuChoice === 'cavalry') {
+        console.log("draw");
+    }
+
     console.log("playerChoice => " + playerChoice);
     console.log("cpuChoice => " + cpuChoice);
 }
 
 
 // Victory conditions
-
-
-
-// if (cpuCardPick === 'archer' && playerChoice === 'spearmen') {
-//     result = 'Draw';
-// }
 
 // if (cpuCardPick === 'samurai' && playerChoice === 'cavalry') {
 //     result = 'Draw';
