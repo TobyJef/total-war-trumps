@@ -16,34 +16,36 @@ const scoreBox = document.getElementById("score-box");
 const result = document.getElementsByClassName("result");
 
 // Game cards
-const archer = document.getElementById("archer-button")
-const samurai = document.getElementById("samurai-button")
-const spearmen = document.getElementById("spearmen-button")
-const cavalry = document.getElementById("cavalry-button")
+const archer = document.getElementById("archer-button");
+const samurai = document.getElementById("samurai-button");
+const spearmen = document.getElementById("spearmen-button");
+const cavalry = document.getElementById("cavalry-button");
 
+// Player choice function
+function game(playerChoice) {
+    console.log(" " + playerChoice);
+}
 
-
-
-
-
-function game(playerChoice){
-    console.log (" " + playerChoice);
+// CPU choice function
+function cpuChoice() {
+    const choices = ['archer', 'samurai', 'spearmen', 'cavalry'];
+    console.log(Math.random());
 }
 
 // Game card event listeners
-function battle(){
-    archer.addEventListener('click', function(){
+function battle() {
+    archer.addEventListener('click', function () {
         game("archer");
-    })
-    samurai.addEventListener('click', function(){
+    });
+    samurai.addEventListener('click', function () {
         game("samurai");
-    })
-    spearmen.addEventListener('click', function(){
+    });
+    spearmen.addEventListener('click', function () {
         game("spearmen");
-    })
-    cavalry.addEventListener('click', function(){
+    });
+    cavalry.addEventListener('click', function () {
         game("cavalry");
-    })
+    });
 }
 
 battle();
