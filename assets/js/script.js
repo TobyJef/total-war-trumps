@@ -23,7 +23,9 @@ const cavalry = document.getElementById("cavalry-button");
 
 // Player choice function
 function game(playerChoice) {
-    console.log(" " + playerChoice);
+    const cpuChoice = cpuCardPick();
+    console.log("playerChoice => " + playerChoice);
+    console.log("cpuChoice => " + cpuChoice);
 }
 
 // Game card event listeners
