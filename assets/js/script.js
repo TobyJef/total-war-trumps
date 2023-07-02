@@ -123,7 +123,7 @@ function game(playerChoice) {
 function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
-    resultMessage.innerHTML = `${cardNameConverter(playerChoice)} Defeats  ${cardNameConverter(cpuChoice)} . Glorious Victory!`;
+    resultMessage.innerHTML = `${cardNameConverter(playerChoice)} Defeats  ${cardNameConverter(cpuChoice)}. Glorious Victory!`;
     console.log("you win");
     console.log(playerScoreCounter);
 }
@@ -132,13 +132,14 @@ function victory(playerChoice, cpuChoice) {
 function loss(playerChoice, cpuChoice) {
     cpuScoreCounter++;
     cpuScore.innerHTML = cpuScoreCounter;
-    resultMessage.innerHTML = `${cardNameConverter(cpuChoice)} Defeats  ${cardNameConverter(playerChoice)} . Shameful Defeat!`;
+    resultMessage.innerHTML = `${cardNameConverter(cpuChoice)} Defeats  ${cardNameConverter(playerChoice)}. Shameful Defeat!`;
     console.log("you loose");
     console.log(cpuScoreCounter);
 }
 
 //draw message
-function draw() {
+function draw(playerChoice, cpuChoice) {
+    resultMessage.innerHTML = `${cardNameConverter(cpuChoice)} Stalemated  ${cardNameConverter(playerChoice)}. Both sides were evenly matched!`;
     console.log("no winner");
 }
 
