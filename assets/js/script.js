@@ -123,6 +123,7 @@ function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
     resultMessage.innerHTML = `The Shogun's ${cardNameConverter(playerChoice)} Defeats The Daimyo's ${cardNameConverter(cpuChoice)}. Glorious Victory!`;
+    document.getElementById(playerChoice).classList.add('player-win-green');
     console.log("you win");
     console.log(playerScoreCounter);
 }
