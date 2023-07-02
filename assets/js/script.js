@@ -122,7 +122,7 @@ function game(playerChoice) {
 function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
-    resultMessage.innerHTML = `${cardNameConverter(playerChoice)} Defeats  ${cardNameConverter(cpuChoice)}. Glorious Victory!`;
+    resultMessage.innerHTML = `The Shogun's ${cardNameConverter(playerChoice)} Defeats The Daimyo's ${cardNameConverter(cpuChoice)}. Glorious Victory!`;
     console.log("you win");
     console.log(playerScoreCounter);
 }
@@ -131,14 +131,14 @@ function victory(playerChoice, cpuChoice) {
 function loss(playerChoice, cpuChoice) {
     cpuScoreCounter++;
     cpuScore.innerHTML = cpuScoreCounter;
-    resultMessage.innerHTML = `${cardNameConverter(cpuChoice)} Defeats  ${cardNameConverter(playerChoice)}. Shameful Defeat!`;
+    resultMessage.innerHTML = ` The Daimyo's ${cardNameConverter(cpuChoice)} Defeats The Shogun's ${cardNameConverter(playerChoice)}. Shameful Defeat!`;
     console.log("you loose");
     console.log(cpuScoreCounter);
 }
 
 //draw message
 function draw(playerChoice, cpuChoice) {
-    resultMessage.innerHTML = `${cardNameConverter(cpuChoice)} Stalemated  ${cardNameConverter(playerChoice)}. Both sides were evenly matched!`;
+    resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemated against The Daimyo's ${cardNameConverter(cpuChoice)}`;
     console.log("no winner");
 }
 
@@ -155,20 +155,6 @@ function cardNameConverter(cardName) {
 // function campaignVictory(){}
 
 // function campaingDefeat(){}
-
-
-    // function playerChoice(event) {
-    //     if (playerChoice = archerButton)
-    //         console.log('You have chosen Archer');
-    //     if (playerChoice = samuraiButton)
-    //         console.log('You have chosen Samurai');
-    //     else if (playerChoice = spearmenButton)
-    //         console.log('You have chosen Yari Spearmen');
-    //     else if (playerChoice = cavalryButton)
-    //         console.log('You have chosen Cavalry');
-
-    // }
-
 
 
 // Display Outcome function - best out of 5 vs cpu
