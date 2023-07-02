@@ -123,16 +123,16 @@ function game(playerChoice) {
 function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
-    cpuScore.innerHTML = cpuScoreCounter;
     resultMessage.innerHTML = `${cardNameConverter(playerChoice)} Defeats  ${cardNameConverter(cpuChoice)} . Glorious Victory!`;
     console.log("you win");
     console.log(playerScoreCounter);
 }
 
 //loss message
-function loss() {
+function loss(playerChoice, cpuChoice) {
     cpuScoreCounter++;
     cpuScore.innerHTML = cpuScoreCounter;
+    resultMessage.innerHTML = `${cardNameConverter(cpuChoice)} Defeats  ${cardNameConverter(playerChoice)} . Shameful Defeat!`;
     console.log("you loose");
     console.log(cpuScoreCounter);
 }
@@ -142,6 +142,8 @@ function draw() {
     console.log("no winner");
 }
 
+
+//Converter to Capitalise 
 function cardNameConverter(cardName) {
     if (cardName === "archer") return "Archer";
     if (cardName === "samurai") return "Samurai";
