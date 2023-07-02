@@ -116,16 +116,20 @@ function game(playerChoice) {
     console.log("cpuChoice => " + cpuChoice);
 }
 
+
+
+// result message functions
+//win message
 function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
     cpuScore.innerHTML = cpuScoreCounter;
-    resultMessage.innerHTML = `${playerChoice} Defeats  ${cpuChoice} . Glorious Victory!`;
+    resultMessage.innerHTML = `${cardNameConverter(playerChoice)} Defeats  ${cardNameConverter(cpuChoice)} . Glorious Victory!`;
     console.log("you win");
     console.log(playerScoreCounter);
 }
 
-
+//loss message
 function loss() {
     cpuScoreCounter++;
     cpuScore.innerHTML = cpuScoreCounter;
@@ -133,8 +137,16 @@ function loss() {
     console.log(cpuScoreCounter);
 }
 
+//draw message
 function draw() {
     console.log("no winner");
+}
+
+function cardNameConverter(cardName) {
+    if (cardName === "archer") return "Archer";
+    if (cardName === "samurai") return "Samurai";
+    if (cardName === "spearmen") return "Spearmen";
+    if (cardName === "cavalry") return "Cavalry";
 }
 
 
