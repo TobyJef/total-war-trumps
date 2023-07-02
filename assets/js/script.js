@@ -13,7 +13,7 @@ const cpuScore = document.getElementById("cpu-score");
 const scoreBox = document.getElementById("score-box");
 
 // Result message
-const result = document.getElementsByClassName("result > p");
+var resultMessage = document.getElementById("result-message");
 
 // Game cards
 const archer = document.getElementById("archer-button");
@@ -52,63 +52,63 @@ function cpuCardPick() {
 function game(playerChoice) {
     const cpuChoice = cpuCardPick();
     if (cpuChoice === playerChoice) {
-        draw();
+        draw(playerChoice, cpuChoice);
         console.log("draw");
     }
 
     if (cpuChoice === 'archer' && playerChoice === 'spearmen') {
-        draw();
+        draw(playerChoice, cpuChoice);
         console.log("draw");
     }
 
     if (playerChoice === 'archer' && cpuChoice === 'spearmen') {
-        draw();
+        draw(playerChoice, cpuChoice);
         console.log("draw");
     }
 
     if (cpuChoice === 'samurai' && playerChoice === 'cavalry') {
-        draw();
+        draw(playerChoice, cpuChoice);
         console.log("draw");
     }
 
     if (playerChoice === 'samurai' && cpuChoice === 'cavalry') {
-        draw();
+        draw(playerChoice, cpuChoice);
         console.log("draw");
     }
 
     if (cpuChoice === 'archer' && playerChoice === 'samurai') {
-        loss();
+        loss(playerChoice, cpuChoice);
         console.log("player loss");
     }
 
     if (cpuChoice === 'samurai' && playerChoice === 'spearmen') {
-        loss();
+        loss(playerChoice, cpuChoice);
         console.log("player loss");
     }
 
     if (cpuChoice === 'spearmen' && playerChoice === 'cavalry') {
-        loss();
+        loss(playerChoice, cpuChoice);
         console.log("player loss");
     }
 
     if (cpuChoice === 'cavalry' && playerChoice === 'archer') {
-        loss();
+        loss(playerChoice, cpuChoice);
         console.log("player loss");
     }
     if (cpuChoice === 'samurai' && playerChoice === 'archer') {
-        victory();
+        victory(playerChoice, cpuChoice);
         console.log("player win");
     }
     if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
-        victory();
+        victory(playerChoice, cpuChoice);
         console.log("player win");
     }
     if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
-        victory();
+        victory(playerChoice, cpuChoice);
         console.log("player win");
     }
     if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
-        victory();
+        victory(playerChoice, cpuChoice);
         console.log("player win");
     }
 
@@ -116,11 +116,11 @@ function game(playerChoice) {
     console.log("cpuChoice => " + cpuChoice);
 }
 
-function win(playerChoice, cpuChoice) {
+function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
     cpuScore.innerHTML = cpuScoreCounter;
-    result.innerHTML = `playerChoice + " Defeats " + cpuChoice + ". You win"`;
+    resultMessage.innerHTML = `${playerChoice} Defeats  ${cpuChoice} . Glorious Victory!`;
     console.log("you win");
     console.log(playerScoreCounter);
 }
@@ -133,7 +133,9 @@ function loss() {
     console.log(cpuScoreCounter);
 }
 
-function draw() { }
+function draw() {
+    console.log("no winner");
+}
 
 
 // Victory conditions
