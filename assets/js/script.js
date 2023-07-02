@@ -13,7 +13,7 @@ const cpuScore = document.getElementById("cpu-score");
 const scoreBox = document.getElementById("score-box");
 
 // Result message
-var result = document.getElementsByClassName("result");
+const result = document.getElementsByClassName("result > p");
 
 // Game cards
 const archer = document.getElementById("archer-button");
@@ -76,7 +76,6 @@ function game(playerChoice) {
         console.log("draw");
     }
 
-
     if (cpuChoice === 'archer' && playerChoice === 'samurai') {
         loss();
         console.log("player loss");
@@ -117,11 +116,11 @@ function game(playerChoice) {
     console.log("cpuChoice => " + cpuChoice);
 }
 
-function victory(playerChoice, cpuChoice) {
+function win(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
     cpuScore.innerHTML = cpuScoreCounter;
-    result.innerHTML = playerChoice + " Defeats " + cpuChoice + ". You win";
+    result.innerHTML = `playerChoice + " Defeats " + cpuChoice + ". You win"`;
     console.log("you win");
     console.log(playerScoreCounter);
 }
