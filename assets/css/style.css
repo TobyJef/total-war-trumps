@@ -32,7 +32,7 @@ body {
 
 /* Game backstory and rules */
 
-#rules-box {
+#story-box {
     box-sizing: border-box;
     background-color: beige;
     margin-top: 30px;
@@ -98,6 +98,15 @@ button {
     border-radius: 4px;
 }
 
+.rules {
+    box-sizing: border-box;
+    background-color: beige;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 4px;
+}
 
 .warrior-name {
     font-weight: bold;
@@ -105,7 +114,16 @@ button {
     margin-bottom: 15px;
 }
 
+#result-message {
+    background-color: beige;
+    max-width: 85%;
+    height: 100px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
 
+}
 
 /* Score area styling */
 
@@ -119,20 +137,6 @@ button {
     border-radius: 4px;
 }
 
-
-
-
-
-/* poss not needed */
-/* #warriors {}
-
-.archer-button{}
-
-.samurai-button{}
-
-.spearmen-button{}
-
-.cavalry-button{} */
 
 /* Game area */
 
@@ -161,3 +165,16 @@ lightsteelblue #b0c4de 176,
 cornflowerblue #6495ed 100,
 149,
 237; */
+
+
+
+/* poss not needed */
+/* #warriors {}
+
+.archer-button{}
+
+.samurai-button{}
+
+.spearmen-button{}
+
+.cavalry-button{} */
