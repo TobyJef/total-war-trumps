@@ -48,7 +48,7 @@ function cpuCardPick() {
 }
 
 // Player choice function
-// If statements
+// If win/loss/draw statements
 function game(playerChoice) {
     const cpuChoice = cpuCardPick();
     if (cpuChoice === playerChoice) {
@@ -117,7 +117,6 @@ function game(playerChoice) {
 }
 
 
-
 // result message functions
 //win message
 function victory(playerChoice, cpuChoice) {
@@ -144,7 +143,7 @@ function draw(playerChoice, cpuChoice) {
 }
 
 
-//Converter to Capitalise 
+//Converter to capitalise card names 
 function cardNameConverter(cardName) {
     if (cardName === "archer") return "Archer";
     if (cardName === "samurai") return "Samurai";
@@ -153,14 +152,9 @@ function cardNameConverter(cardName) {
 }
 
 
-// Victory conditions
+// function campaignVictory(){}
 
-// result = 'Glorious Victory!';
-// result = 'Shameful Defeat';
-
-
-
-// resultDisplay.innerHTML = result;
+// function campaingDefeat(){}
 
 
     // function playerChoice(event) {
@@ -198,13 +192,6 @@ function cardNameConverter(cardName) {
 
 
 // }
-
-// const winResult = 'Glorious Victory!';
-// const lossResult = 'Shameful Defeat';
-
-// 
-
-
 
 
 // let playGame = confirm("Are you ready to defend your Kingdom?");
