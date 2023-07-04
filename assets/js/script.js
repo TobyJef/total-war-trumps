@@ -7,10 +7,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Player and Computer scores
 var playerScoreCounter = 0;
+let playerGameResult;
 const playerScore = document.getElementById("player-score");
 var cpuScoreCounter = 0;
+let cpuCampaignWin;
 const cpuScore = document.getElementById("cpu-score");
 const scoreBox = document.getElementById("score-box");
+
+if (playerScoreCounter = 5) {
+    playerGameResult = "Congratulations, you have defended your Kingdom!";
+}
+console.log(playerGameResult);
+
 
 // Result message
 var resultMessage = document.getElementById("result-message");
@@ -123,7 +131,6 @@ function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
     resultMessage.innerHTML = `The Shogun's ${cardNameConverter(playerChoice)} Defeats The Daimyo's ${cardNameConverter(cpuChoice)}. Glorious Victory!`;
-    document.getElementById(playerChoice).classList.add('player-choice-green');
     console.log("you win");
     console.log(playerScoreCounter);
 }
@@ -153,17 +160,23 @@ function cardNameConverter(cardName) {
 }
 
 
-function campaignVictory(playerChoice){
-    for (let i = 0, i = 5, i++) {
+// function campaignVictory(playerChoice) {
+//     for (let pw = 0, pw <= 5, pw++) {
+//         if (playerScoreCounter = 5)
+//         ()
+//             console.log("Player campaign win");
+//     }
+// };
 
-    }
-};
+// function campaingDefeat(cpuChoice) {
+//     for (let cw = 0, cw <= 5, cw++) {
+//         if (cpuScoreCounter = 5)
+//         ()
+//             console.log("cpu campaign win");
+//     }
+// };
 
-function campaingDefeat(cpuChoice){
-    for (let i = 0, i = 5, i++) {
 
-    }
-};
 
 
 // Display Outcome function - first to 5 victories to win campaign
