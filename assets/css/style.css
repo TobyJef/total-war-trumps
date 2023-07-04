@@ -154,12 +154,12 @@ button {
 
 .score {}
 
-.player-win-green {
+.player-choice-green {
     border: 4px solid green;
-    box-shadow: 0 0 5px green;
+    box-shadow: 0 0 50px darkgreen;
 }
 
-.cpu-win-red {
+.cpu-choice-red {
     border: 4px solid red;
     box-shadow: 0 0 5px red;
 }

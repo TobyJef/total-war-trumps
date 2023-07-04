@@ -1,9 +1,9 @@
 // Wait to start game after DOM has finished loading
-// code 
-// document.addEventListener("DOMContentLoaded", function () {
-//     let buttons = document.getElementsByTagName("button");
+// Code used from Code Institute Love Maths project
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementsByTagName("button");
 
-// });
+});
 
 // Player and Computer scores
 var playerScoreCounter = 0;
@@ -123,7 +123,7 @@ function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
     resultMessage.innerHTML = `The Shogun's ${cardNameConverter(playerChoice)} Defeats The Daimyo's ${cardNameConverter(cpuChoice)}. Glorious Victory!`;
-    document.getElementById(playerChoice).classList.add('player-win-green');
+    document.getElementById(playerChoice).classList.add('player-choice-green');
     console.log("you win");
     console.log(playerScoreCounter);
 }
@@ -153,12 +153,20 @@ function cardNameConverter(cardName) {
 }
 
 
-// function campaignVictory(){}
+function campaignVictory(playerChoice){
+    for (let i = 0, i = 5, i++) {
 
-// function campaingDefeat(){}
+    }
+};
+
+function campaingDefeat(cpuChoice){
+    for (let i = 0, i = 5, i++) {
+
+    }
+};
 
 
-// Display Outcome function - best out of 5 vs cpu
+// Display Outcome function - first to 5 victories to win campaign
 
 // function displayOutcome() {
 
