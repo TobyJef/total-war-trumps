@@ -185,12 +185,20 @@ function hideText() {
 
 function showGame() {
     var y = document.getElementsByClassName("game-area");
-    if (x.style.display === "block") {
+    if (y.style.display === "block") {
         y.style.display = "none";
     } else {
         y.style.dispaly = "block";
     }
 };
+
+
+$(function () {
+    $("#div2").hide();
+    $("#preview").on("click", function () {
+        $("#div1, #div2").toggle();
+    });
+});
 
 
 

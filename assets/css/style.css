@@ -44,10 +44,9 @@ body {
     /* font-size: larger */
 }
 
-.hide {
+.hide-button {
     cursor: pointer;
 }
-
 
 /* Game Card styling */
 
@@ -72,6 +71,10 @@ body {
 
 .units:hover {
     transform: scale(1.1);
+}
+
+.game-area {
+    display: none;
 }
 
 /* .warrior-name {
