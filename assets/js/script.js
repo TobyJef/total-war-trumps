@@ -2,20 +2,17 @@
 // Code used from Code Institute Love Maths project
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-
 });
 
 // Player and Computer scores
 var playerScoreCounter = 0;
-let playerGameResult;
 const playerScore = document.getElementById("player-score");
 var cpuScoreCounter = 0;
-let cpuCampaignWin;
 const cpuScore = document.getElementById("cpu-score");
 const scoreBox = document.getElementById("score-box");
 
-// Result message
-var resultMessage = document.getElementById("result-message");
+// Final result message
+var finalResult = document.getElementById("final-result");
 
 // Game cards
 const archer = document.getElementById("archer-button");
@@ -116,30 +113,39 @@ function game(playerChoice) {
 
     playerVictory();
     cpuVictory();
+    campaignWin();
+    campaignLoss();
 
     console.log("playerChoice => " + playerChoice);
     console.log("cpuChoice => " + cpuChoice);
-}
+};
+
+// Final game total win/loss 
 
 function playerVictory() {
     if (playerScoreCounter === 5) {
+        finalResult.innerHTML = `Congratulations, You have defended your Kingdom!`;
         console.log('Campaign Victory');
     }
+
 };
 
 function cpuVictory() {
     if (cpuScoreCounter === 5) {
         console.log('Campaign Defeat');
+        finalResult.innerHTML = `You have lost control of your Kingdom`;
     }
 };
 
+// Round result message
+var resultMessage = document.getElementById("result-message");
 
 // result message functions
 //win message
 function victory(playerChoice, cpuChoice) {
     playerScoreCounter++;
     playerScore.innerHTML = playerScoreCounter;
-    resultMessage.innerHTML = `The Shogun's ${cardNameConverter(playerChoice)} Defeats The Daimyo's ${cardNameConverter(cpuChoice)}. Glorious Victory!`;
+    resultMessage.innerHTML = `Glorious Victory! The Shogun's ${cardNameConverter(playerChoice)} Defeated The Daimyo's ${cardNameConverter(cpuChoice)}.`;
     console.log("you win");
     console.log(playerScoreCounter);
 }
@@ -148,7 +154,7 @@ function victory(playerChoice, cpuChoice) {
 function loss(playerChoice, cpuChoice) {
     cpuScoreCounter++;
     cpuScore.innerHTML = cpuScoreCounter;
-    resultMessage.innerHTML = `The Daimyo's ${cardNameConverter(cpuChoice)} Defeats The Shogun's ${cardNameConverter(playerChoice)}. Shameful Defeat!`;
+    resultMessage.innerHTML = `Shameful Defeat! The Daimyo's ${cardNameConverter(cpuChoice)} Defeated The Shogun's ${cardNameConverter(playerChoice)}.`;
     console.log("you loose");
     console.log(cpuScoreCounter);
 }
@@ -159,6 +165,16 @@ function draw(playerChoice, cpuChoice) {
     console.log("no winner");
 }
 
+
+
+function campaignWin(playerVictory) {
+
+};
+
+function campaignLoss(cpuVictory) {
+
+};
+
 //Converter to capitalise card names 
 function cardNameConverter(cardName) {
     if (cardName === "archer") return "Archer";
@@ -166,18 +182,6 @@ function cardNameConverter(cardName) {
     if (cardName === "spearmen") return "Spearmen";
     if (cardName === "cavalry") return "Cavalry";
 }
-
-
-
-// function campaingDefeat(cpuChoice) {
-//     for (let cw = 0, cw <= 5, cw++) {
-//         if (cpuScoreCounter = 5)
-//         ()
-//             console.log("cpu campaign win");
-//     }
-// };
-
-
 
 
 // Display Outcome function - first to 5 victories to win campaign
