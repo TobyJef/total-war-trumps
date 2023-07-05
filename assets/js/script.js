@@ -113,8 +113,6 @@ function game(playerChoice) {
 
     playerVictory();
     cpuVictory();
-    campaignWin();
-    campaignLoss();
 
     console.log("playerChoice => " + playerChoice);
     console.log("cpuChoice => " + cpuChoice);
@@ -125,6 +123,8 @@ function game(playerChoice) {
 function playerVictory() {
     if (playerScoreCounter === 5) {
         finalResult.innerHTML = `Congratulations, You have defended your Kingdom!`;
+        finalResult.style.color = "green";
+        alert('You Win');
         console.log('Campaign Victory');
     }
 
@@ -132,8 +132,10 @@ function playerVictory() {
 
 function cpuVictory() {
     if (cpuScoreCounter === 5) {
+        finalResult.innerHTML = `You have lost control of your Kingdom.`;
+        alert('You Lose');
         console.log('Campaign Defeat');
-        finalResult.innerHTML = `You have lost control of your Kingdom`;
+
     }
 };
 
@@ -174,32 +176,38 @@ function cardNameConverter(cardName) {
 }
 
 
-function hideText() {
-    var x = document.getElementById("text-area");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+// function hideText() {
+//     var x = document.getElementById("text-area");
+//     if (x.style.display === "none") {
+//         x.style.display = "block";
+//     } else {
+//         x.style.display = "none";
+//     }
+// };
+
+// function showGame() {
+//     var y = document.getElementsByClassName("game-area");
+//     if (y.style.display === "block") {
+//         y.style.display = "none";
+//     } else {
+//         y.style.dispaly = "block";
+//     }
+// };
+
+
+function beginGame() {
+    var y = document.getElementById('game-area');
+    var hideButton = document.getElementById('hide-button');
+    if (y.style.display == 'none') {
+        y.style.display = 'block';
+        hideButton.innerHTML = 'Return to Start';
     } else {
-        x.style.display = "none";
+        y.style.display = 'none';
+        hideButton.innerHTML = 'Begin Campaign';
     }
 };
 
-function showGame() {
-    var y = document.getElementsByClassName("game-area");
-    if (y.style.display === "block") {
-        y.style.display = "none";
-    } else {
-        y.style.dispaly = "block";
-    }
-};
-
-
-$(function () {
-    $("#div2").hide();
-    $("#preview").on("click", function () {
-        $("#div1, #div2").toggle();
-    });
-});
-
+beginGame();
 
 
 // Display Outcome function - first to 5 victories to win campaign
@@ -229,8 +237,8 @@ $(function () {
 // };
 
 
-// let playGame = confirm("Are you ready to defend your Kingdom?");
-// if (playGame) {}
+// let replayGame = confirm("Would you like to play again?");
+// if (replayGame) {}
 
     // function getFormDetails(event) {
 

@@ -38,33 +38,33 @@
             <p>In the event of a stalemate, no points are awarded</p>
             <p>The first player to 5 Victories will win the campaign.</p>
             <p>Can you defend your Kingdom?</p>
-            <button class="hide-button" onclick="hideText(), showGame()">Click Me</button>
         </div>
     </div>
+    <div><button onclick="beginGame()" class="hide-button">Begin Campaign</button></div>
 
     <!-- Player name input-->
-    <!-- <form>
-            <div class="name-input">
-                <label for="name">Name:</label>
-                <input id="player-name" type="text" name="name" required>
-            </div>
-            <p id="name-result"></p>
-        </form>
-        
-
-
-    <-- Win condition reminder -->
-
-    <div class="rules">
-        <p>Archers defeats Samurai</p>
-        <p>Samurai defeats Spearmen</p>
-        <p>Spearmen defeats Cavalry</p>
-        <p>Cavalry defeats Archers</p>
+    <!-- <form> -->
+    <!-- <div class="name-input">
+        <label for="name">Name:</label>
+        <input id="player-name" type="text" name="name" required>
     </div>
+    <p id="name-result"></p>
+    </form> -->
 
     <!-- Player game choices -->
     <section class="game-area">
         <div id="game-box">
+
+            <!-- Win condition reminder -->
+
+            <div class="rules">
+                <p>Remember:</p>
+                <p>Archers defeats Samurai. Samurai defeats Spearmen. Spearmen defeats Cavalry. Cavalry defeats
+                    Archers.</p>
+                <p>Achers stalemate Spearmen. Samurai stalemate Cavalry.</p>
+                <p>First player to 5 Victories wins the campaign.</p>
+            </div>
+
 
             <h2>Choose your Warrior</h2>
             <div class="warrior-name">

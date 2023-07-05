@@ -73,9 +73,10 @@ body {
     transform: scale(1.1);
 }
 
-.game-area {
+/* Hides game area until button click*/
+/* .game-area {
     display: none;
-}
+} */
 
 /* .warrior-name {
     display: inline;
@@ -142,6 +143,12 @@ button {
     margin: 20px auto;
     padding: 15px;
     border-radius: 4px;
+}
+
+#final-result {
+    font-size: 2rem;
+    color: red;
+    z-index: 4;
 }
 
 
