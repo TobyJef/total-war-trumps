@@ -44,9 +44,13 @@ body {
     /* font-size: larger */
 }
 
+.hide {
+    cursor: pointer;
+}
+
+
 /* Game Card styling */
 
-/* poss remove warrior box */
 #warrior-box {
     background-color: beige;
     box-sizing: border-box;
@@ -56,8 +60,6 @@ body {
     margin-top: 15px;
     border-radius: 4px;
 }
-
-
 
 .units {
     cursor: pointer;

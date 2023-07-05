@@ -165,16 +165,6 @@ function draw(playerChoice, cpuChoice) {
     console.log("no winner");
 }
 
-
-
-function campaignWin(playerVictory) {
-
-};
-
-function campaignLoss(cpuVictory) {
-
-};
-
 //Converter to capitalise card names 
 function cardNameConverter(cardName) {
     if (cardName === "archer") return "Archer";
@@ -184,27 +174,51 @@ function cardNameConverter(cardName) {
 }
 
 
+function hideText() {
+    var x = document.getElementById("text-area");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+};
+
+function showGame() {
+    var y = document.getElementsByClassName("game-area");
+    if (x.style.display === "block") {
+        y.style.display = "none";
+    } else {
+        y.style.dispaly = "block";
+    }
+};
+
+
+
 // Display Outcome function - first to 5 victories to win campaign
 
 // function displayOutcome() {
+//
+//      if (playerwin <= 2){
+//  result = "Close Victory"};
+//
+//      if (playerwin > 2 && win < 5){    
+//              result = "Victory"};
+//
+//     if (playerwin == 5) {
+//         result = "Total Victory!";
+//     }; 
 
-//     let win = 3;
-//     let result;
+// if (cpuwin <= 2){
+//     result = "Close Defeat"
+// };
 
-//     if (win >= 3) {
-//         result = "Congratulations, you have defended your Kingdom!";
-//     } else if (win < 3) {
-//         result = "You have lost control of your Kingdom";
-//     }
+// if (cpuWin > 2 && win < 5){
+//     result = "Defeat"
+// };
 
-
-//     if win > loss Congratulations, you have defended your Kingdom!;
-//     if win < loss You have lost control of your Kingdom;
-
-//     let outcome = decideVictory();
-
-
-// }
+// if (cpuWin == 5){
+//     result = "Complete Defeat"
+// };
 
 
 // let playGame = confirm("Are you ready to defend your Kingdom?");

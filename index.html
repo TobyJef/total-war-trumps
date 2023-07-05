@@ -22,32 +22,38 @@
                 class="logo" src="assets/images/logo.webp" alt="samurai logo"></h1>
     </div>
     <!-- Description of the game story and rules -->
-    <div id="story-box">
-        <h2>How To Win At Total War: Trumps</h2>
-        <p>Take on the mantle of Shogun and plan your attack. A rival Daimyo is challenging your position as Supreme
-            Ruler of Japan.</p>
-        <p>Choose either your finest Archer, Samurai, Yari Spearmen or Cavalry. To fight for glory against this
-            dishonourable foe.</p>
-        <p>Archers rain down arrows onto Samurai from distance. The Samurai wield their katanas up close against Yari
-            Spearmen.</p>
-        <p>Use Yari Spearmen to hold off charging Cavalry. Or close the gap against far away Archers with a Cavalry
-            attack.</p>
-        <p>Best your rival to maintain your dynasty or face the ultimate punishment.</p>
-        <p>In the event of a stalemate, no points are awarded</p>
-        <p>The first player to 5 Victories will win the campaign.</p>
-        <p>Can you defend your Kingdom?</p>
+    <div id="text-area">
+        <div id="story-box">
+            <h2>How To Win At Total War: Trumps</h2>
+            <p>Take on the mantle of Shogun and plan your attack. A rival Daimyo is challenging your position as Supreme
+                Ruler of Japan.</p>
+            <p>Choose either your finest Archer, Samurai, Yari Spearmen or Cavalry. To fight for glory against this
+                dishonourable foe.</p>
+            <p>Archers rain down arrows onto Samurai from distance. The Samurai wield their katanas up close against
+                Yari
+                Spearmen.</p>
+            <p>Use Yari Spearmen to hold off charging Cavalry. Or close the gap against far away Archers with a Cavalry
+                attack.</p>
+            <p>Best your rival to maintain your dynasty or face the ultimate punishment.</p>
+            <p>In the event of a stalemate, no points are awarded</p>
+            <p>The first player to 5 Victories will win the campaign.</p>
+            <p>Can you defend your Kingdom?</p>
+            <button class="hide" onclick="hideText()">Click Me</button>
+        </div>
+    </div>
 
-        <!-- Player name input-->
-        <form>
+    <!-- Player name input-->
+    <!-- <form>
             <div class="name-input">
                 <label for="name">Name:</label>
                 <input id="player-name" type="text" name="name" required>
             </div>
+            <p id="name-result"></p>
         </form>
-        <p id="name-result"></p>
-    </div>
+        
 
-    <!-- Win condition reminder -->
+
+    <-- Win condition reminder -->
 
     <div class="rules">
         <p>Archers defeats Samurai</p>
@@ -90,20 +96,21 @@
         <!-- Player win/loss message -->
         <div>
             <p id="result-message"></p>
-            <p id="final-result"></p>
         </div>
 
         <div id="score-box">
             <div id="player" class="player-one">
                 <h3>Glorius Shogun Victories: </h3><span id="player-score">0</span>
+                <p id="final-result"></p>
             </div>
             <div id="cpu" class="cpu-player">
                 <h3>Dishonourable Daimyo Victories: </h3><span id="cpu-score">0</span>
             </div>
         </div>
+    </section>
 
-    </section when win, Congratulations, you have defended your Kingdom! when loose, You have lost control of your
-        Kingdom <!-- JavaScript file -->
+
+    <!-- JavaScript file -->
     <script src="assets/js/script.js"></script>
 </body>
 
