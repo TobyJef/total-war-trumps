@@ -14,12 +14,6 @@ let cpuCampaignWin;
 const cpuScore = document.getElementById("cpu-score");
 const scoreBox = document.getElementById("score-box");
 
-if (playerScoreCounter = 5) {
-    playerGameResult = "Congratulations, you have defended your Kingdom!";
-}
-console.log(playerGameResult);
-
-
 // Result message
 var resultMessage = document.getElementById("result-message");
 
@@ -120,9 +114,17 @@ function game(playerChoice) {
         console.log("player win");
     }
 
+    checkScore();
     console.log("playerChoice => " + playerChoice);
     console.log("cpuChoice => " + cpuChoice);
 }
+
+function checkScore() {
+    if (playerScoreCounter === 5 || cpuScoreCounter === 5) {
+        console.log('Campaign Victory');
+    }
+};
+
 
 
 // result message functions
@@ -146,10 +148,9 @@ function loss(playerChoice, cpuChoice) {
 
 //draw message
 function draw(playerChoice, cpuChoice) {
-    resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemated against The Daimyo's ${cardNameConverter(cpuChoice)}`;
+    resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemates The Daimyo's ${cardNameConverter(cpuChoice)}`;
     console.log("no winner");
 }
-
 
 //Converter to capitalise card names 
 function cardNameConverter(cardName) {
@@ -160,13 +161,6 @@ function cardNameConverter(cardName) {
 }
 
 
-// function campaignVictory(playerChoice) {
-//     for (let pw = 0, pw <= 5, pw++) {
-//         if (playerScoreCounter = 5)
-//         ()
-//             console.log("Player campaign win");
-//     }
-// };
 
 // function campaingDefeat(cpuChoice) {
 //     for (let cw = 0, cw <= 5, cw++) {
