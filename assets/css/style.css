@@ -151,6 +151,10 @@ button {
     z-index: 4;
 }
 
+#replay-button {
+    display: none;
+}
+
 
 /* Game area */
 

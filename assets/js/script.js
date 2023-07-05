@@ -124,6 +124,7 @@ function playerVictory() {
     if (playerScoreCounter === 5) {
         finalResult.innerHTML = `Congratulations, You have defended your Kingdom!`;
         finalResult.style.color = "green";
+        document.getElementById('replay-button').style.display = 'block';
         alert('You Win');
         console.log('Campaign Victory');
     }
@@ -133,6 +134,7 @@ function playerVictory() {
 function cpuVictory() {
     if (cpuScoreCounter === 5) {
         finalResult.innerHTML = `You have lost control of your Kingdom.`;
+        document.getElementById('replay-button').style.display = 'block';
         alert('You Lose');
         console.log('Campaign Defeat');
 
@@ -173,8 +175,13 @@ function cardNameConverter(cardName) {
     if (cardName === "samurai") return "Samurai";
     if (cardName === "spearmen") return "Spearmen";
     if (cardName === "cavalry") return "Cavalry";
-}
+};
 
+function replayGame() {
+    document.getElementById('replay-button').style.display = 'none';
+    playerScoreCounter.innerHTML = 0;
+    cpuScoreCounter.innerHTML = 0;
+};
 
 // function hideText() {
 //     var x = document.getElementById("text-area");
@@ -195,19 +202,19 @@ function cardNameConverter(cardName) {
 // };
 
 
-function beginGame() {
-    var y = document.getElementById('game-area');
-    var hideButton = document.getElementById('hide-button');
-    if (y.style.display == 'none') {
-        y.style.display = 'block';
-        hideButton.innerHTML = 'Return to Start';
-    } else {
-        y.style.display = 'none';
-        hideButton.innerHTML = 'Begin Campaign';
-    }
-};
+// function beginGame() {
+//     var y = document.getElementById('game-area');
+//     var hideButton = document.getElementById('hide-button');
+//     if (y.style.display == 'none') {
+//         y.style.display = 'block';
+//         hideButton.innerHTML = 'Return to Start';
+//     } else {
+//         y.style.display = 'none';
+//         hideButton.innerHTML = 'Begin Campaign';
+//     }
+// };
 
-beginGame();
+// beginGame();
 
 
 // Display Outcome function - first to 5 victories to win campaign
