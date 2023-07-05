@@ -114,17 +114,24 @@ function game(playerChoice) {
         console.log("player win");
     }
 
-    checkScore();
+    playerVictory();
+    cpuVictory();
+
     console.log("playerChoice => " + playerChoice);
     console.log("cpuChoice => " + cpuChoice);
 }
 
-function checkScore() {
-    if (playerScoreCounter === 5 || cpuScoreCounter === 5) {
+function playerVictory() {
+    if (playerScoreCounter === 5) {
         console.log('Campaign Victory');
     }
 };
 
+function cpuVictory() {
+    if (cpuScoreCounter === 5) {
+        console.log('Campaign Defeat');
+    }
+};
 
 
 // result message functions
@@ -141,7 +148,7 @@ function victory(playerChoice, cpuChoice) {
 function loss(playerChoice, cpuChoice) {
     cpuScoreCounter++;
     cpuScore.innerHTML = cpuScoreCounter;
-    resultMessage.innerHTML = ` The Daimyo's ${cardNameConverter(cpuChoice)} Defeats The Shogun's ${cardNameConverter(playerChoice)}. Shameful Defeat!`;
+    resultMessage.innerHTML = `The Daimyo's ${cardNameConverter(cpuChoice)} Defeats The Shogun's ${cardNameConverter(playerChoice)}. Shameful Defeat!`;
     console.log("you loose");
     console.log(cpuScoreCounter);
 }
