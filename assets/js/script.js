@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Player and Computer scores
-var playerScoreCounter = 0;
+let playerScoreCounter = 0;
 const playerScore = document.getElementById("player-score");
-var cpuScoreCounter = 0;
+let cpuScoreCounter = 0;
 const cpuScore = document.getElementById("cpu-score");
 const scoreBox = document.getElementById("score-box");
 
 // Final result message
-var finalResult = document.getElementById("final-result");
+let finalResult = document.getElementById("final-result");
 
 // Game cards
 const archer = document.getElementById("archer-button");
@@ -51,123 +51,145 @@ function cpuCardPick() {
 function game(playerChoice) {
     const cpuChoice = cpuCardPick();
     if (cpuChoice === playerChoice) {
-        draw(playerChoice, cpuChoice);
+        battleOutcome("draw", playerChoice, cpuChoice);
         console.log("draw");
     }
 
     if (cpuChoice === 'archer' && playerChoice === 'spearmen') {
-        draw(playerChoice, cpuChoice);
-        console.log("draw");
-    }
-
-    if (playerChoice === 'archer' && cpuChoice === 'spearmen') {
-        draw(playerChoice, cpuChoice);
-        console.log("draw");
-    }
-
-    if (cpuChoice === 'samurai' && playerChoice === 'cavalry') {
-        draw(playerChoice, cpuChoice);
+        battleOutcome("draw", playerChoice, cpuChoice);
         console.log("draw");
     }
 
     if (playerChoice === 'samurai' && cpuChoice === 'cavalry') {
-        draw(playerChoice, cpuChoice);
+        battleOutcome("draw", playerChoice, cpuChoice);
         console.log("draw");
     }
 
     if (cpuChoice === 'archer' && playerChoice === 'samurai') {
-        loss(playerChoice, cpuChoice);
+        battleOutcome("loose", playerChoice, cpuChoice);
         console.log("player loss");
     }
 
     if (cpuChoice === 'samurai' && playerChoice === 'spearmen') {
-        loss(playerChoice, cpuChoice);
+        battleOutcome("loose", playerChoice, cpuChoice);
         console.log("player loss");
     }
 
     if (cpuChoice === 'spearmen' && playerChoice === 'cavalry') {
-        loss(playerChoice, cpuChoice);
+        battleOutcome("loose", playerChoice, cpuChoice);
         console.log("player loss");
     }
 
     if (cpuChoice === 'cavalry' && playerChoice === 'archer') {
-        loss(playerChoice, cpuChoice);
+        battleOutcome("loose", playerChoice, cpuChoice);
         console.log("player loss");
     }
     if (cpuChoice === 'samurai' && playerChoice === 'archer') {
-        victory(playerChoice, cpuChoice);
+        battleOutcome("win", playerChoice, cpuChoice);
         console.log("player win");
     }
     if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
-        victory(playerChoice, cpuChoice);
+        battleOutcome("win", playerChoice, cpuChoice);
         console.log("player win");
     }
     if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
-        victory(playerChoice, cpuChoice);
+        battleOutcome("win", playerChoice, cpuChoice);
         console.log("player win");
     }
     if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
-        victory(playerChoice, cpuChoice);
+        battleOutcome("win", playerChoice, cpuChoice);
         console.log("player win");
     }
 
-    playerVictory();
-    cpuVictory();
+    checkForVictory();
+
 
     console.log("playerChoice => " + playerChoice);
     console.log("cpuChoice => " + cpuChoice);
 };
 
+function battleOutcome(outcome, playerChoice, cpuChoice) {
+
+    if (outcome == "win") {
+        playerScoreCounter++;
+        playerScore.innerHTML = playerScoreCounter;
+        resultMessage.innerHTML = `Glorious Victory! The Shogun's ${cardNameConverter(playerChoice)} Defeated The Daimyo's ${cardNameConverter(cpuChoice)}.`;
+        console.log("you win");
+        console.log(playerScoreCounter);
+
+    } else if (outcome == "loose") {
+        cpuScoreCounter++;
+        cpuScore.innerHTML = cpuScoreCounter;
+        resultMessage.innerHTML = `Shameful Defeat! The Daimyo's ${cardNameConverter(cpuChoice)} Defeated The Shogun's ${cardNameConverter(playerChoice)}.`;
+        console.log("you loose");
+        console.log(cpuScoreCounter);
+    } else {
+        resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemates The Daimyo's ${cardNameConverter(cpuChoice)}`;
+        console.log("no winner");
+    }
+}
+
+
+
+
+
+
+// Acknowledgement of help with placement of function playerVictory().
+// More info regarding help is located within the README.md
+
+
 // Final game total win/loss 
 
-function playerVictory() {
+// Acknowledgement of help with construct of the below code from Ed at Tutor Support.
+// Although now renamed by myself. if (playerScoreCounter === 5) was provided by Ed.
+// Advice on where to call the function also provided.
+// More info regarding help is located within the README.md.
+
+function checkForVictory() {
     if (playerScoreCounter === 5) {
         finalResult.innerHTML = `Congratulations, You have defended your Kingdom!`;
         finalResult.style.color = "green";
         document.getElementById('replay-button').style.display = 'block';
         alert('You Win');
         console.log('Campaign Victory');
-    }
-
-};
-
-function cpuVictory() {
-    if (cpuScoreCounter === 5) {
+    } else if (cpuScoreCounter === 5) {
         finalResult.innerHTML = `You have lost control of your Kingdom.`;
         document.getElementById('replay-button').style.display = 'block';
         alert('You Lose');
         console.log('Campaign Defeat');
-
     }
+
 };
 
+
+
 // Round result message
-var resultMessage = document.getElementById("result-message");
+let resultMessage = document.getElementById("result-message");
 
 // result message functions
 //win message
-function victory(playerChoice, cpuChoice) {
-    playerScoreCounter++;
-    playerScore.innerHTML = playerScoreCounter;
-    resultMessage.innerHTML = `Glorious Victory! The Shogun's ${cardNameConverter(playerChoice)} Defeated The Daimyo's ${cardNameConverter(cpuChoice)}.`;
-    console.log("you win");
-    console.log(playerScoreCounter);
-}
+// function victory(playerChoice, cpuChoice) {
+//     playerScoreCounter++;
+//     playerScore.innerHTML = playerScoreCounter;
+//     resultMessage.innerHTML = `Glorious Victory! The Shogun's ${cardNameConverter(playerChoice)} Defeated The Daimyo's ${cardNameConverter(cpuChoice)}.`;
+//     console.log("you win");
+//     console.log(playerScoreCounter);
+// }
 
 //loss message
-function loss(playerChoice, cpuChoice) {
-    cpuScoreCounter++;
-    cpuScore.innerHTML = cpuScoreCounter;
-    resultMessage.innerHTML = `Shameful Defeat! The Daimyo's ${cardNameConverter(cpuChoice)} Defeated The Shogun's ${cardNameConverter(playerChoice)}.`;
-    console.log("you loose");
-    console.log(cpuScoreCounter);
-}
+// function loss(playerChoice, cpuChoice) {
+//     cpuScoreCounter++;
+//     cpuScore.innerHTML = cpuScoreCounter;
+//     resultMessage.innerHTML = `Shameful Defeat! The Daimyo's ${cardNameConverter(cpuChoice)} Defeated The Shogun's ${cardNameConverter(playerChoice)}.`;
+//     console.log("you loose");
+//     console.log(cpuScoreCounter);
+// }
 
 //draw message
-function draw(playerChoice, cpuChoice) {
-    resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemates The Daimyo's ${cardNameConverter(cpuChoice)}`;
-    console.log("no winner");
-}
+// function draw(playerChoice, cpuChoice) {
+//     resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemates The Daimyo's ${cardNameConverter(cpuChoice)}`;
+//     console.log("no winner");
+// }
 
 //Converter to capitalise card names 
 function cardNameConverter(cardName) {
@@ -177,44 +199,46 @@ function cardNameConverter(cardName) {
     if (cardName === "cavalry") return "Cavalry";
 };
 
+// Replay game button
+
 function replayGame() {
     document.getElementById('replay-button').style.display = 'none';
     playerScoreCounter.innerHTML = 0;
     cpuScoreCounter.innerHTML = 0;
 };
 
-// function hideText() {
-//     var x = document.getElementById("text-area");
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//     } else {
-//         x.style.display = "none";
-//     }
-// };
+function hideText() {
+    let x = document.getElementById("text-area");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+};
 
-// function showGame() {
-//     var y = document.getElementsByClassName("game-area");
-//     if (y.style.display === "block") {
-//         y.style.display = "none";
-//     } else {
-//         y.style.dispaly = "block";
-//     }
-// };
+function showGame() {
+    let y = document.getElementsByClassName("game-area");
+    if (y.style.display === "block") {
+        y.style.display = "none";
+    } else {
+        y.style.dispaly = "block";
+    }
+};
 
 
-// function beginGame() {
-//     var y = document.getElementById('game-area');
-//     var hideButton = document.getElementById('hide-button');
-//     if (y.style.display == 'none') {
-//         y.style.display = 'block';
-//         hideButton.innerHTML = 'Return to Start';
-//     } else {
-//         y.style.display = 'none';
-//         hideButton.innerHTML = 'Begin Campaign';
-//     }
-// };
+function beginGame() {
+    var y = document.getElementById('game-area');
+    var hideButton = document.getElementById('hide-button');
+    if (y.style.display == 'none') {
+        y.style.display = 'block';
+        hideButton.innerHTML = 'Return to Start';
+    } else {
+        y.style.display = 'none';
+        hideButton.innerHTML = 'Begin Campaign';
+    }
+};
 
-// beginGame();
+beginGame();
 
 
 // Display Outcome function - first to 5 victories to win campaign
