@@ -20,6 +20,37 @@ const samurai = document.getElementById("samurai-button");
 const spearmen = document.getElementById("spearmen-button");
 const cavalry = document.getElementById("cavalry-button");
 
+// Hide and Reveal Button press
+
+// let div = document.getElementById("text-area");
+// let display = 0;
+
+// function beginGame() {
+//     if (display == 1) {
+//         div.style.display = 'block';
+//         display = 0;
+//     } else {
+//         div.style.display = 'none';
+//         display = 1;
+//     }
+// };
+
+function beginGame() {
+    if (document.getElementById('text-area')) {
+        if (document.getElementById('text-area').style.display == 'none') {
+            document.getElementById('text-area').style.display = 'block';
+            document.getElementById('game-area').style.display = 'none';
+        }
+        else {
+            document.getElementById('text-area').style.display = 'none';
+            document.getElementById('game-area').style.display = 'block';
+        }
+    }
+};
+
+
+
+
 // Game card event listeners
 function battle() {
     archer.addEventListener('click', function () {
@@ -52,60 +83,45 @@ function game(playerChoice) {
     const cpuChoice = cpuCardPick();
     if (cpuChoice === playerChoice) {
         battleOutcome("draw", playerChoice, cpuChoice);
-        console.log("draw");
     }
-
     if (cpuChoice === 'archer' && playerChoice === 'spearmen') {
         battleOutcome("draw", playerChoice, cpuChoice);
-        console.log("draw");
     }
-
     if (playerChoice === 'samurai' && cpuChoice === 'cavalry') {
         battleOutcome("draw", playerChoice, cpuChoice);
-        console.log("draw");
     }
-
     if (cpuChoice === 'archer' && playerChoice === 'samurai') {
         battleOutcome("loose", playerChoice, cpuChoice);
-        console.log("player loss");
     }
-
     if (cpuChoice === 'samurai' && playerChoice === 'spearmen') {
         battleOutcome("loose", playerChoice, cpuChoice);
-        console.log("player loss");
     }
-
     if (cpuChoice === 'spearmen' && playerChoice === 'cavalry') {
         battleOutcome("loose", playerChoice, cpuChoice);
-        console.log("player loss");
     }
-
     if (cpuChoice === 'cavalry' && playerChoice === 'archer') {
         battleOutcome("loose", playerChoice, cpuChoice);
-        console.log("player loss");
     }
     if (cpuChoice === 'samurai' && playerChoice === 'archer') {
         battleOutcome("win", playerChoice, cpuChoice);
-        console.log("player win");
     }
     if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
         battleOutcome("win", playerChoice, cpuChoice);
-        console.log("player win");
     }
     if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
         battleOutcome("win", playerChoice, cpuChoice);
-        console.log("player win");
     }
     if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
         battleOutcome("win", playerChoice, cpuChoice);
-        console.log("player win");
     }
-
     checkForVictory();
-
-    console.log("playerChoice => " + playerChoice);
-    console.log("cpuChoice => " + cpuChoice);
 };
+
+// Acknowledgement of help with construct of the below code provided by my mentor Graeme Taylor.
+// Credit of code given to Graeme Taylor.
+// More info regarding help is located within the README.md.
+
+// Combination if else function to count scores and call win/loss/draw messages
 
 function battleOutcome(outcome, playerChoice, cpuChoice) {
 
@@ -113,23 +129,18 @@ function battleOutcome(outcome, playerChoice, cpuChoice) {
         playerScoreCounter++;
         playerScore.innerHTML = playerScoreCounter;
         resultMessage.innerHTML = `Glorious Victory! The Shogun's ${cardNameConverter(playerChoice)} Defeated The Daimyo's ${cardNameConverter(cpuChoice)}.`;
-        console.log("you win");
-        console.log(playerScoreCounter);
     } else if (outcome == "loose") {
         cpuScoreCounter++;
         cpuScore.innerHTML = cpuScoreCounter;
         resultMessage.innerHTML = `Shameful Defeat! The Daimyo's ${cardNameConverter(cpuChoice)} Defeated The Shogun's ${cardNameConverter(playerChoice)}.`;
-        console.log("you loose");
-        console.log(cpuScoreCounter);
     } else {
         resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemates The Daimyo's ${cardNameConverter(cpuChoice)}`;
-        console.log("no winner");
     }
 };
 
 // Acknowledgement of help with construct of the below code from Ed at Tutor Support.
 // Credit given to Ed.
-// Although now renamed by myself. if (playerScoreCounter === 5) was provided by Ed.
+// Although now renamed by myself. original name of "if (playerScoreCounter === 5)" was provided by Ed.
 // Advice on where to call the function also provided.
 // More info regarding help is located within the README.md.
 
@@ -141,12 +152,10 @@ function checkForVictory() {
         finalResult.style.color = "green";
         document.getElementById('replay-button').style.display = 'block';
         alert('You Win');
-        console.log('Campaign Victory');
     } else if (cpuScoreCounter === 5) {
         finalResult.innerHTML = `You have lost control of your Kingdom.`;
         document.getElementById('replay-button').style.display = 'block';
         alert('You Lose');
-        console.log('Campaign Defeat');
     }
 };
 
@@ -169,49 +178,41 @@ function replayGame() {
     cpuScoreCounter.innerHTML = 0;
 };
 
-function hideText() {
-    let x = document.getElementById("text-area");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-};
+// Hide rules function
 
-function showGame() {
-    let y = document.getElementsByClassName("game-area");
-    if (y.style.display === "block") {
-        y.style.display = "none";
-    } else {
-        y.style.dispaly = "block";
-    }
-};
+// function hideText() {
+//     let x = document.getElementById("text-area");
+//     if (x.style.display === "none") {
+//         x.style.display = "block";
+//     } else {
+//         x.style.display = "none";
+//     }
+// };
 
-function beginGame() {
-    let y = document.getElementsByClassName('game-area');
-    let hideButton = document.getElementsById('hide-button');
-    if (y.style.display == 'none') {
-        y.style.display = 'block';
-        hideButton.innerHTML = 'Return to Start';
-    } else {
-        y.style.display = 'none';
-        hideButton.innerHTML = 'Begin Campaign';
-    }
-};
+// Show hidden game function after rules area hidden.
 
-beginGame();
+// function showGame() {
+//     let y = document.getElementsByClassName("game-area");
+//     if (y.style.display === "block") {
+//         y.style.display = "none";
+//     } else {
+//         y.style.dispaly = "block";
+//     }
+// };
 
+// function beginGame() {
+//     let y = document.getElementsByClassName('game-area');
+//     let hideButton = document.getElementsById('hide-button');
+//     if (y.style.display == 'none') {
+//         y.style.display = 'block';
+//         hideButton.innerHTML = 'Return to Start';
+//     } else {
+//         y.style.display = 'none';
+//         hideButton.innerHTML = 'Begin Campaign';
+//     }
+// };
+
+// beginGame();
 
 // let replayGame = confirm("Would you like to play again?");
 // if (replayGame) {}
-
-    // function getFormDetails(event) {
-
-    //     event.preventDefault();
-
-    //     let name = document.getElementById('name');
-    //     console.log('name');
-
-    //     document.getElementById('name-result').textContent = name.value;
-    // }
-

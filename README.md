@@ -46,6 +46,10 @@ Content
 - Background image found
 - [Link for image]()
 
+## Page style decisions
+
+## Who Total War: Trumps if for
+
 ## Future Improvements
 
 - For a future update it would be my goal to add more units, adding further complexity to the game.
