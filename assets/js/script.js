@@ -22,34 +22,22 @@ const cavalry = document.getElementById("cavalry-button");
 
 // Hide and Reveal Button press
 
-// let div = document.getElementById("text-area");
-// let display = 0;
-
-// function beginGame() {
-//     if (display == 1) {
-//         div.style.display = 'block';
-//         display = 0;
-//     } else {
-//         div.style.display = 'none';
-//         display = 1;
-//     }
-// };
+let hideButton = document.getElementById('hide-button');
 
 function beginGame() {
     if (document.getElementById('text-area')) {
         if (document.getElementById('text-area').style.display == 'none') {
             document.getElementById('text-area').style.display = 'block';
             document.getElementById('game-area').style.display = 'none';
+            hideButton.innerHTML = 'Begin Campaign';
         }
         else {
             document.getElementById('text-area').style.display = 'none';
             document.getElementById('game-area').style.display = 'block';
+            hideButton.innerHTML = 'Rules';
         }
     }
 };
-
-
-
 
 // Game card event listeners
 function battle() {
@@ -177,42 +165,6 @@ function replayGame() {
     playerScoreCounter.innerHTML = 0;
     cpuScoreCounter.innerHTML = 0;
 };
-
-// Hide rules function
-
-// function hideText() {
-//     let x = document.getElementById("text-area");
-//     if (x.style.display === "none") {
-//         x.style.display = "block";
-//     } else {
-//         x.style.display = "none";
-//     }
-// };
-
-// Show hidden game function after rules area hidden.
-
-// function showGame() {
-//     let y = document.getElementsByClassName("game-area");
-//     if (y.style.display === "block") {
-//         y.style.display = "none";
-//     } else {
-//         y.style.dispaly = "block";
-//     }
-// };
-
-// function beginGame() {
-//     let y = document.getElementsByClassName('game-area');
-//     let hideButton = document.getElementsById('hide-button');
-//     if (y.style.display == 'none') {
-//         y.style.display = 'block';
-//         hideButton.innerHTML = 'Return to Start';
-//     } else {
-//         y.style.display = 'none';
-//         hideButton.innerHTML = 'Begin Campaign';
-//     }
-// };
-
-// beginGame();
 
 // let replayGame = confirm("Would you like to play again?");
 // if (replayGame) {}
