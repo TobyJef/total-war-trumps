@@ -160,11 +160,13 @@ function cardNameConverter(cardName) {
 
 // Replay game button
 
+let reset = 0;
+
 function replayGame() {
     document.getElementById('replay-button').style.display = 'none';
-    playerScoreCounter.innerHTML = 0;
-    cpuScoreCounter.innerHTML = 0;
-};
+    document.getElementById('replay-button').onclick = function () {
+        reset = 0;
+        document.getElementById('playerScoreCounter').innerHTML = reset;
+    };
 
-// let replayGame = confirm("Would you like to play again?");
-// if (replayGame) {}
+};
