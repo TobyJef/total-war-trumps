@@ -103,7 +103,6 @@ function game(playerChoice) {
 
     checkForVictory();
 
-
     console.log("playerChoice => " + playerChoice);
     console.log("cpuChoice => " + cpuChoice);
 };
@@ -116,7 +115,6 @@ function battleOutcome(outcome, playerChoice, cpuChoice) {
         resultMessage.innerHTML = `Glorious Victory! The Shogun's ${cardNameConverter(playerChoice)} Defeated The Daimyo's ${cardNameConverter(cpuChoice)}.`;
         console.log("you win");
         console.log(playerScoreCounter);
-
     } else if (outcome == "loose") {
         cpuScoreCounter++;
         cpuScore.innerHTML = cpuScoreCounter;
@@ -127,23 +125,15 @@ function battleOutcome(outcome, playerChoice, cpuChoice) {
         resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemates The Daimyo's ${cardNameConverter(cpuChoice)}`;
         console.log("no winner");
     }
-}
-
-
-
-
-
-
-// Acknowledgement of help with placement of function playerVictory().
-// More info regarding help is located within the README.md
-
-
-// Final game total win/loss 
+};
 
 // Acknowledgement of help with construct of the below code from Ed at Tutor Support.
+// Credit given to Ed.
 // Although now renamed by myself. if (playerScoreCounter === 5) was provided by Ed.
 // Advice on where to call the function also provided.
 // More info regarding help is located within the README.md.
+
+// Final game total win/loss
 
 function checkForVictory() {
     if (playerScoreCounter === 5) {
@@ -158,38 +148,10 @@ function checkForVictory() {
         alert('You Lose');
         console.log('Campaign Defeat');
     }
-
 };
-
-
 
 // Round result message
 let resultMessage = document.getElementById("result-message");
-
-// result message functions
-//win message
-// function victory(playerChoice, cpuChoice) {
-//     playerScoreCounter++;
-//     playerScore.innerHTML = playerScoreCounter;
-//     resultMessage.innerHTML = `Glorious Victory! The Shogun's ${cardNameConverter(playerChoice)} Defeated The Daimyo's ${cardNameConverter(cpuChoice)}.`;
-//     console.log("you win");
-//     console.log(playerScoreCounter);
-// }
-
-//loss message
-// function loss(playerChoice, cpuChoice) {
-//     cpuScoreCounter++;
-//     cpuScore.innerHTML = cpuScoreCounter;
-//     resultMessage.innerHTML = `Shameful Defeat! The Daimyo's ${cardNameConverter(cpuChoice)} Defeated The Shogun's ${cardNameConverter(playerChoice)}.`;
-//     console.log("you loose");
-//     console.log(cpuScoreCounter);
-// }
-
-//draw message
-// function draw(playerChoice, cpuChoice) {
-//     resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemates The Daimyo's ${cardNameConverter(cpuChoice)}`;
-//     console.log("no winner");
-// }
 
 //Converter to capitalise card names 
 function cardNameConverter(cardName) {
@@ -225,10 +187,9 @@ function showGame() {
     }
 };
 
-
 function beginGame() {
-    var y = document.getElementById('game-area');
-    var hideButton = document.getElementById('hide-button');
+    let y = document.getElementsByClassName('game-area');
+    let hideButton = document.getElementsById('hide-button');
     if (y.style.display == 'none') {
         y.style.display = 'block';
         hideButton.innerHTML = 'Return to Start';
@@ -239,33 +200,6 @@ function beginGame() {
 };
 
 beginGame();
-
-
-// Display Outcome function - first to 5 victories to win campaign
-
-// function displayOutcome() {
-//
-//      if (playerwin <= 2){
-//  result = "Close Victory"};
-//
-//      if (playerwin > 2 && win < 5){    
-//              result = "Victory"};
-//
-//     if (playerwin == 5) {
-//         result = "Total Victory!";
-//     }; 
-
-// if (cpuwin <= 2){
-//     result = "Close Defeat"
-// };
-
-// if (cpuWin > 2 && win < 5){
-//     result = "Defeat"
-// };
-
-// if (cpuWin == 5){
-//     result = "Complete Defeat"
-// };
 
 
 // let replayGame = confirm("Would you like to play again?");
