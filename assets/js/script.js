@@ -1,24 +1,24 @@
 // Wait to start game after DOM has finished loading
 // Code used from Code Institute Love Maths project
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+document.addEventListener('DOMContentLoaded', function () {
+    let buttons = document.getElementsByTagName('button');
 });
 
 // Player and Computer scores
 let playerScoreCounter = 0;
-const playerScore = document.getElementById("player-score");
+const playerScore = document.getElementById('player-score');
 let cpuScoreCounter = 0;
-const cpuScore = document.getElementById("cpu-score");
-const scoreBox = document.getElementById("score-box");
+const cpuScore = document.getElementById('cpu-score');
+const scoreBox = document.getElementById('score-box');
 
 // Final result message
-let finalResult = document.getElementById("final-result");
+let finalResult = document.getElementById('final-result');
 
 // Game cards
-const archer = document.getElementById("archer-button");
-const samurai = document.getElementById("samurai-button");
-const spearmen = document.getElementById("spearmen-button");
-const cavalry = document.getElementById("cavalry-button");
+const archer = document.getElementById('archer-button');
+const samurai = document.getElementById('samurai-button');
+const spearmen = document.getElementById('spearmen-button');
+const cavalry = document.getElementById('cavalry-button');
 
 // Hide and Reveal Button press
 
@@ -42,16 +42,16 @@ function beginGame() {
 // Game card event listeners
 function battle() {
     archer.addEventListener('click', function () {
-        game("archer");
+        game('archer');
     });
     samurai.addEventListener('click', function () {
-        game("samurai");
+        game('samurai');
     });
     spearmen.addEventListener('click', function () {
-        game("spearmen");
+        game('spearmen');
     });
     cavalry.addEventListener('click', function () {
-        game("cavalry");
+        game('cavalry');
     });
 }
 
@@ -70,37 +70,37 @@ function cpuCardPick() {
 function game(playerChoice) {
     const cpuChoice = cpuCardPick();
     if (cpuChoice === playerChoice) {
-        battleOutcome("draw", playerChoice, cpuChoice);
+        battleOutcome('draw', playerChoice, cpuChoice);
     }
     if (cpuChoice === 'archer' && playerChoice === 'spearmen') {
-        battleOutcome("draw", playerChoice, cpuChoice);
+        battleOutcome('draw', playerChoice, cpuChoice);
     }
     if (playerChoice === 'samurai' && cpuChoice === 'cavalry') {
-        battleOutcome("draw", playerChoice, cpuChoice);
+        battleOutcome('draw', playerChoice, cpuChoice);
     }
     if (cpuChoice === 'archer' && playerChoice === 'samurai') {
-        battleOutcome("loose", playerChoice, cpuChoice);
+        battleOutcome('loss', playerChoice, cpuChoice);
     }
     if (cpuChoice === 'samurai' && playerChoice === 'spearmen') {
-        battleOutcome("loose", playerChoice, cpuChoice);
+        battleOutcome('loss', playerChoice, cpuChoice);
     }
     if (cpuChoice === 'spearmen' && playerChoice === 'cavalry') {
-        battleOutcome("loose", playerChoice, cpuChoice);
+        battleOutcome('loss', playerChoice, cpuChoice);
     }
     if (cpuChoice === 'cavalry' && playerChoice === 'archer') {
-        battleOutcome("loose", playerChoice, cpuChoice);
+        battleOutcome('loss', playerChoice, cpuChoice);
     }
     if (cpuChoice === 'samurai' && playerChoice === 'archer') {
         battleOutcome("win", playerChoice, cpuChoice);
     }
     if (cpuChoice === 'spearmen' && playerChoice === 'samurai') {
-        battleOutcome("win", playerChoice, cpuChoice);
+        battleOutcome('win', playerChoice, cpuChoice);
     }
     if (cpuChoice === 'cavalry' && playerChoice === 'spearmen') {
-        battleOutcome("win", playerChoice, cpuChoice);
+        battleOutcome('win', playerChoice, cpuChoice);
     }
     if (cpuChoice === 'archer' && playerChoice === 'cavalry') {
-        battleOutcome("win", playerChoice, cpuChoice);
+        battleOutcome('win', playerChoice, cpuChoice);
     }
     checkForVictory();
 };
@@ -113,11 +113,11 @@ function game(playerChoice) {
 
 function battleOutcome(outcome, playerChoice, cpuChoice) {
 
-    if (outcome == "win") {
+    if (outcome == 'win') {
         playerScoreCounter++;
         playerScore.innerHTML = playerScoreCounter;
         resultMessage.innerHTML = `Glorious Victory! The Shogun's ${cardNameConverter(playerChoice)} Defeated The Daimyo's ${cardNameConverter(cpuChoice)}.`;
-    } else if (outcome == "loose") {
+    } else if (outcome == 'loss') {
         cpuScoreCounter++;
         cpuScore.innerHTML = cpuScoreCounter;
         resultMessage.innerHTML = `Shameful Defeat! The Daimyo's ${cardNameConverter(cpuChoice)} Defeated The Shogun's ${cardNameConverter(playerChoice)}.`;
@@ -137,7 +137,7 @@ function battleOutcome(outcome, playerChoice, cpuChoice) {
 function checkForVictory() {
     if (playerScoreCounter === 5) {
         finalResult.innerHTML = `Congratulations, You have defended your Kingdom!`;
-        finalResult.style.color = "green";
+        finalResult.style.color = 'green';
         document.getElementById('replay-button').style.display = 'block';
         alert('You Win');
     } else if (cpuScoreCounter === 5) {
@@ -148,14 +148,14 @@ function checkForVictory() {
 };
 
 // Round result message
-let resultMessage = document.getElementById("result-message");
+let resultMessage = document.getElementById('result-message');
 
 //Converter to capitalise card names 
 function cardNameConverter(cardName) {
-    if (cardName === "archer") return "Archer";
-    if (cardName === "samurai") return "Samurai";
-    if (cardName === "spearmen") return "Spearmen";
-    if (cardName === "cavalry") return "Cavalry";
+    if (cardName === 'archer') return 'Archer';
+    if (cardName === 'samurai') return 'Samurai';
+    if (cardName === 'spearmen') return 'Spearmen';
+    if (cardName === 'cavalry') return 'Cavalry';
 };
 
 // Replay game button
