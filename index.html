@@ -40,10 +40,10 @@
             <p>The first player to 5 Victories will win the campaign.</p>
             <p>Can you defend your Kingdom?</p>
         </div>
-
     </div>
 
-    <div><button onclick="beginGame()" id="hide-button">Begin Campaign</button></div>
+    <div><button onclick="beginGame()" class="campaign-button" class="button" id="hide-button">Begin Campaign</button>
+    </div>
 
     <!-- Player game choices -->
     <div id="game-area" class="hide">
@@ -59,12 +59,14 @@
                 <p>First player to 5 Victories wins the campaign.</p>
             </div>
 
-            <h2>Choose your Warrior</h2>
-            <div class="warrior-name">
-                <span>Archer</span>
-                <span>Samurai</span>
-                <span>Spearmen</span>
-                <span>Cavalry</span>
+            <div class="card-names">
+                <h2>Choose your Warrior</h2>
+                <div class="warrior-name">
+                    <span>Archer</span>
+                    <span>Samurai</span>
+                    <span>Spearmen</span>
+                    <span>Cavalry</span>
+                </div>
             </div>
 
             <!-- Players game cards-->
@@ -95,7 +97,9 @@
             <div id="player" class="player-one">
                 <h3>Glorius Shogun Victories: </h3><span id="player-score">0</span>
                 <p id="final-result"></p>
-                <div><button id="replay-button" class="reset-button" onclick="replayGame()">Play again?</button>
+                <div><button id="replay-button" class="rules-button" class="button" class="reset-button"
+                        onclick="replayGame()">Play
+                        again?</button>
                 </div>
             </div>
             <div id="cpu" class="cpu-player">

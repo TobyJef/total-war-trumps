@@ -1,5 +1,5 @@
 body {
-    /* background-image: url("../images/lone-warrior.webp"); */
+    background-image: url("../images/site-images/lone-warrior.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: steelblue;
@@ -20,6 +20,7 @@ body {
     font-size: 22px;
     height: 165px;
     border-radius: 4px;
+    border-radius: 60px;
 }
 
 .logo {
@@ -28,6 +29,23 @@ body {
     top: 35px;
     padding-left: 40px;
     padding-right: 40px;
+    border-radius: 50%;
+}
+
+/* Game buttons */
+
+.button {
+    background-color: white;
+}
+
+.campaign-button {
+    margin-top: 10px;
+}
+
+.rules-button {}
+
+.hide-button {
+    cursor: pointer;
 }
 
 /* Game backstory and rules */
@@ -36,17 +54,15 @@ body {
     box-sizing: border-box;
     background-color: beige;
     margin-top: 30px;
-    max-width: 85%;
+    max-width: 75%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 60px;
     /* font-size: larger */
 }
 
-.hide-button {
-    cursor: pointer;
-}
+
 
 /* Game Card styling */
 
@@ -64,9 +80,14 @@ body {
     cursor: pointer;
     height: 250px;
     transition: 0.1s;
+    border-radius: 4px;
     /* display: flex;
     justify-content: center; */
     /* margin: 30px; */
+}
+
+.card-names {
+    background-color: white;
 }
 
 .units:hover {
@@ -93,7 +114,7 @@ button {
     border: none;
     margin-left: auto;
     margin-right: auto;
-    background-color: lightsteelblue;
+    background-color: beige;
 }
 
 #game-box {
