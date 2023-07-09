@@ -33,34 +33,27 @@ body {
 
 /* Game buttons */
 
-.button {
-    background-color: white;
-}
-
 .campaign-button {
     margin-top: 15px;
     height: 35px;
-    background-color: white;
+    background-color: #b0e0e6;
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid black;
 }
 
-.rules-button {
+#replay-button {
     margin-top: 15px;
     height: 35px;
-    background-color: white;
+    background-color: #b0e0e6;
     border-radius: 4px;
     cursor: pointer;
+    display: none;
+    border: 1px solid black;
 }
 
 .hide-button {
     cursor: pointer;
-}
-
-#replay-button {
-    display: none;
-    border: 1px solid black;
 }
 
 /* Game backstory and rules */
@@ -91,9 +84,9 @@ body {
 
 /* Game cards styling */
 
-.card-names {
+/* .card-names {
     background-color: white;
-}
+} */
 
 .warrior-name {
     font-weight: bold;
@@ -151,6 +144,8 @@ button {
     margin-right: auto;
     border-radius: 60px;
     font-size: larger;
+    font-weight: bold;
+    padding-top: 15px;
 }
 
 /* Score area styling */
@@ -170,6 +165,27 @@ button {
     font-size: 2rem;
     color: red;
 }
+
+.player-one {
+    font-size: 1.2rem;
+}
+
+#player-score {
+    color: green;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cpu-player {
+    font-size: 1.2rem;
+}
+
+#cpu-score {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 
 /* background colour possibilities */
 /* cadetblue #5f9ea0 95,

@@ -21,7 +21,6 @@ const spearmen = document.getElementById('spearmen-button');
 const cavalry = document.getElementById('cavalry-button');
 
 // Hide and Reveal Button press
-
 let hideButton = document.getElementById('hide-button');
 
 function beginGame() {
@@ -111,7 +110,6 @@ function game(playerChoice) {
 // More info regarding help is located within the README.md.
 
 // Combination if else function to count scores and call win/loss/draw messages
-
 function battleOutcome(outcome, playerChoice, cpuChoice) {
 
     if (outcome == 'win') {
@@ -134,17 +132,22 @@ function battleOutcome(outcome, playerChoice, cpuChoice) {
 // More info regarding help is located within the README.md.
 
 // Final game total win/loss
-
 function checkForVictory() {
     if (playerScoreCounter === 5) {
         finalResult.innerHTML = `Congratulations, You have defended your Kingdom!`;
         finalResult.style.color = 'green';
         document.getElementById('replay-button').style.display = 'block';
-        alert('You Win');
+        document.getElementById('archer-button').disabled = true;
+        document.getElementById('samurai-button').disabled = true;
+        document.getElementById('spearmen-button').disabled = true;
+        document.getElementById('cavalry-button').disabled = true;
     } else if (cpuScoreCounter === 5) {
         finalResult.innerHTML = `You have lost control of your Kingdom.`;
         document.getElementById('replay-button').style.display = 'block';
-        alert('You Lose');
+        document.getElementById('archer-button').disabled = true;
+        document.getElementById('samurai-button').disabled = true;
+        document.getElementById('spearmen-button').disabled = true;
+        document.getElementById('cavalry-button').disabled = true;
     }
 };
 
@@ -160,14 +163,12 @@ function cardNameConverter(cardName) {
 };
 
 // Replay game button
-
-let reset = 0;
-
 function replayGame() {
     document.getElementById('replay-button').style.display = 'none';
-    document.getElementById('replay-button').onclick = function () {
-        reset = 0;
-        document.getElementById('playerScoreCounter').innerHTML = reset;
-    };
-
+    document.getElementById('archer-button').disabled = false;
+    document.getElementById('samurai-button').disabled = false;
+    document.getElementById('spearmen-button').disabled = false;
+    document.getElementById('cavalry-button').disabled = false;
+    resultMessage.innerHTML = '';
+    finalResult.innerHTML = '';
 };
