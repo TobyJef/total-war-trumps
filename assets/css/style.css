@@ -42,12 +42,25 @@ body {
     height: 35px;
     background-color: white;
     border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid black;
 }
 
-.rules-button {}
+.rules-button {
+    margin-top: 15px;
+    height: 35px;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
 .hide-button {
     cursor: pointer;
+}
+
+#replay-button {
+    display: none;
+    border: 1px solid black;
 }
 
 /* Game backstory and rules */
@@ -73,6 +86,7 @@ body {
     margin-right: auto;
     margin-top: 40px;
     border-radius: 60px;
+    padding-top: 1px;
 }
 
 /* Game cards styling */
@@ -103,10 +117,12 @@ body {
     height: 250px;
     transition: 0.1s;
     border-radius: 4px;
+    border: 2px solid;
 }
 
 .selection {
     background-color: beige;
+    width: 150px;
 }
 
 .units:hover {
@@ -153,10 +169,6 @@ button {
 #final-result {
     font-size: 2rem;
     color: red;
-}
-
-#replay-button {
-    display: none;
 }
 
 /* background colour possibilities */

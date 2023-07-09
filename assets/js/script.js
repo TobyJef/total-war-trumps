@@ -35,6 +35,7 @@ function beginGame() {
             document.getElementById('text-area').style.display = 'none';
             document.getElementById('game-area').style.display = 'block';
             hideButton.innerHTML = 'Rules';
+            document.getElementById('hide-button').style.width = '110px';
         }
     }
 };
