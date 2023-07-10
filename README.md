@@ -8,7 +8,7 @@ Similar in logic to Rock, Paper, Scissors where Rock beats Scissors, Scissors be
 
 In this game, the units consist of Archers, Samurai, Yari Spearmen and Cavalry.
 Archers trump Samurai, Samurai trump Yari Spearmen, Yari Spearmen trump Cavalry and finally Cavalry trumps Archers.
-While Archers against Spearmen and Samurai against Cavalry will result in a draw, that will result in no points being awarded.
+While Archers against Spearmen and Samurai against Cavalry will result in a draw, which results in no points being awarded.
 
 [Link to the live Total War: Trumps website](https://tobyjef.github.io/total-war-trumps/)
 
@@ -48,21 +48,31 @@ Content
 
 ## Page style decisions
 
-## Who Total War: Trumps if for
+- Following research into the traditional colours of ancient Japan, this has influenced my choice in using more muted and plain colours used within my styling.
+- The beige colour used throught the page for the main content was used to not clash with my used background image, and to focus the player towards the backstory, rules and game area. While allowing the more colourful aspect of the playing cards to stand out.
+- The white colour used for the score area and game outcome message was used to not only allow for clear visibility of the scores and either the Victory or Defeat message depending on the outcome of the game. The colour white historically in Japan is
+
+[Symbolic Colours in Japan](https://en.japantravel.com/blog/symbolic-colors-in-japan/61005).
+
+## Who will play Total War: Trumps
+
+- Total War: Trumps - Shogun Edition, and any planned future variations is intended for those that are fans of the real time strategy historical period combat games of the Total War series or for those seeking to play a historically themed and different variation of the game rock, paper, scissors. This game acts as an homage in way to Total War Shogun 2. Total War: Shogun 2 which is set in 16th century feudal Japan, allows players to take control of one of the nine in game factions to battle your way to power and control central Japan. Similar to the real life events that led to the unification of Japan.
 
 ## Future Improvements
 
 - For a future update it would be my goal to add more units, adding further complexity to the game.
 - I would also like to include a drop down option, allowing players to change the time period and the in game units.
   i.e. A Roman Empire update, Roman Urban Cohorts taking place of Sword Samurai, etc.
+- Redesign and re apply the logo I had intended to use originally either side of the page title. During media queries and resizing it became to small to use on anthing smaller than a laptop screen.
 
 ## Testing
 
 Validators screenshots
 
 - HTML Validator
-- CSS Validator
+- CSS Validator ![CSS Validation Pass](assets/images/documentation/css-validation.webp)
 - JS Validator
+- Lighthouse score
 
 ### Deployment
 
@@ -76,7 +86,7 @@ Click the settings button.
 Select pages in the left hand navigation menu.
 From the source dropdown, select main branch and press save.
 Following a short delay, the deployment will have been completed and the page provides a link to the completed website
-_The live link can be found here *insert live link*_
+The live link can be found below:
 [Link to the live Total War: Trumps website](https://tobyjef.github.io/total-war-trumps/)
 
 ### Bugs

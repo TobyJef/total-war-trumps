@@ -142,6 +142,7 @@ button {
 
 #final-result {
     font-size: 2rem;
+    font-weight: bold;
     color: red;
 }
 
@@ -282,7 +283,6 @@ button {
     #story-box {
         max-width: 90%;
     }
-
 }
 
 /* Larger Tablets on landscape view */
@@ -325,21 +325,39 @@ button {
 
     #story-box {
         max-width: 85%;
-        font-size: 1.1rem
+        font-size: 1.3rem
     }
 
     #game-box {
-        max-width: 65%;
-        font-size: 1.1rem
+        max-width: 75%;
+        height: 650px;
+        font-size: 1.2rem
+    }
+
+    .warrior-name {
+        word-spacing: 75px;
+    }
+
+    .selection {
+        width: 150px;
+    }
+
+    .units {
+        height: 250px;
     }
 
     #result-message {
-        max-width: 70%;
+        max-width: 75%;
+        font-weight: bold;
         font-size: larger;
     }
 
     #score-box {
-        max-width: 85%;
+        max-width: 75%;
+    }
+
+    #final-result {
+        font-weight: bold;
     }
 }
 
@@ -358,15 +376,33 @@ button {
 
     #game-box {
         max-width: 65%;
+        height: 650px;
         font-size: 1.2rem;
+    }
+
+    .warrior-name {
+        word-spacing: 75px;
+    }
+
+    .selection {
+        width: 150px;
+    }
+
+    .units {
+        height: 250px;
     }
 
     #result-message {
         max-width: 65%;
+        font-weight: bold;
         font-size: larger;
     }
 
     #score-box {
         max-width: 65%;
+    }
+
+    #final-result {
+        font-weight: bold;
     }
 }

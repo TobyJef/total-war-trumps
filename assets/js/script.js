@@ -10,6 +10,8 @@ const playerScore = document.getElementById('player-score');
 let cpuScoreCounter = 0;
 const cpuScore = document.getElementById('cpu-score');
 const scoreBox = document.getElementById('score-box');
+let resetPlayerScore = 0;
+let resetCpuScore = 0;
 
 // Final result message
 let finalResult = document.getElementById('final-result');
@@ -53,7 +55,7 @@ function battle() {
     cavalry.addEventListener('click', function () {
         game('cavalry');
     });
-}
+};
 
 battle();
 
@@ -63,7 +65,7 @@ function cpuCardPick() {
     const cpuChoices = ['archer', 'samurai', 'spearmen', 'cavalry'];
     const randomNumber = Math.floor(Math.random() * 4);
     return cpuChoices[randomNumber];
-}
+};
 
 // Player choice function
 // If win/loss/draw statements
@@ -171,4 +173,6 @@ function replayGame() {
     document.getElementById('cavalry-button').disabled = false;
     resultMessage.innerHTML = '';
     finalResult.innerHTML = '';
+
+    console.log(playerScoreCounter);
 };
