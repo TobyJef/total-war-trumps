@@ -14,7 +14,8 @@ While Archers against Spearmen and Samurai against Cavalry will result in a draw
 
 ## Features
 
-- On page load you are met with the games rules, objective and backstory. Followed by a button (still to be implemented and confirmed working) that would hide this content and then reveal the game with short reminder on how to win the round. Due to the differences between the standard and well known Rock, Paper, Scissors game that this game is based on.
+- On page load you are met with the games rules, objective and backstory. Below sits a button inviting them to begin the game. Upon clicking the button the backstory and rules overview content disappear to reveal the game with short reminder on how to win. Due to the differences between the standard and well known Rock, Paper, Scissors game that this game is based on.
+  ![Total War: Trumps Homepage](assets/images/documentation/homepage.webp)
 
 - insert screenshot of rules-box with button and hidden game area content here..
 
@@ -50,7 +51,7 @@ Content
 
 - Following research into the traditional colours of ancient Japan, this has influenced my choice in using more muted and plain colours used within my styling.
 - The beige colour used throught the page for the main content was used to not clash with my used background image, and to focus the player towards the backstory, rules and game area. While allowing the more colourful aspect of the playing cards to stand out.
-- The white colour used for the score area and game outcome message was used to not only allow for clear visibility of the scores and either the Victory or Defeat message depending on the outcome of the game. The colour white historically in Japan is
+- The white colour used for the score area and game outcome message was used to not only allow for clear visibility of the scores and the Victory or Defeat message depending on the outcome of the game. The colour white was historically in Japan by the Emporer of Japan in Shinto Rituals. While also in Buddhism, the colour white also means death, and white attributes have been used for the ritual samurai suicide called ‘seppuku’. This was also eluded to in the backstory element of the game as the ultimate punishment, if the player lost.
 
 [Symbolic Colours in Japan](https://en.japantravel.com/blog/symbolic-colors-in-japan/61005).
 
@@ -67,35 +68,71 @@ Content
 
 ## Testing
 
-Validators screenshots
+The validators used in the testing of the were:
 
-- HTML Validator
-- CSS Validator ![CSS Validation Pass](assets/images/documentation/css-validation.webp)
-- JS Validator
-- Lighthouse score
+- W3C HTML Validator
+- W3C CSS Validator (Jigsaw)
+- JSHint JavaScript Validator
+- Google Developer Tools Lighthouse report
 
-### Deployment
+- HTML Validator - Validation passed with no errors found.
+  ![HTML Validation Check Pass](assets/images/documentation/html-validation.webp)
 
-The site Total War: Trumps was deployed to Github pages.
+- CSS Validator - Validation passed with no errors found.
+  ![CSS Validation Check Pass](assets/images/documentation/css-validation.webp)
 
-To deploy the page on Github pages, the steps below are as follows:
+- JavaScript Validator - Validation passed.
+  ![JavaScript Validation Check Pass]()
 
-Login to Github.
-Go to the repository for this project, TobyJef/total-war-trumps.
-Click the settings button.
-Select pages in the left hand navigation menu.
-From the source dropdown, select main branch and press save.
-Following a short delay, the deployment will have been completed and the page provides a link to the completed website
+- Lighthouse report score - Performance, Accessibility, Best Practices and SEO all rated at 100% when tested for Desktop. - Performance rated at 97%, Accessibility, Best Practices and SEO all rated at 100% when tested for Mobile.
+  ![Desktop Lighthouse Score](assets/images/documentation/lighthouse-report-desktop.webp)
+  ![Mobile Lighthouse Score](assets/images/documentation/lighthouse-report-mobile.webp)
+
+### Deployment and Development
+
+- The site Total War: Trumps - Shogun Edition was deployed to Github pages.
+
+To deploy the live site on Github pages, the steps below are as follows:
+
+Login into Github.
+Go into the repository for this project, (https://github.com/TobyJef/total-war-trumps)
+Click the settings button located on the upper navigation bar.
+Locate and select pages from the Code and automation section of the left hand navigation menu.
+From the Branch dropdown box, select Main and press save.
+Following a short delay, the deployment will have been completed and the page provides a link to the completed website.
 The live link can be found below:
 [Link to the live Total War: Trumps website](https://tobyjef.github.io/total-war-trumps/)
+
+Local Development
+
+To fork the repository:
+
+Log into Github.
+Go to the repository for this project, (https://github.com/TobyJef/total-war-trumps)
+Click the Fork button in the top right corner.
+
+How to Clone
+To clone the repository:
+
+Log in (or sign up) to GitHub.
+Go to the repository for this project, kera-cudmore/TheQuizArms
+Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 ### Bugs
 
 - Hide/Reveal content button issues.
 
-### Acknowledgements
+- During initial HTML Validation an error returned on a Charset attribute on a Meta element. After reaching out to Sarah at Tutor Support, Sarah explained why that issue had occured. I was informed that the error occured because I submitted the working URL from the Github workspace and not the URL from the Live Site. Sarah also informed me that after she had checked the Live Site Url there was further errors discovered by the validator. These were down to elements having seperate multiple class names being assigned to them. Once those class elements were combined and the URL from the Live Site was resubmitted for validation. All checks returned clear.
+  ![Inital HTML Validation error](assets/images/documentation/html-error-1.webp)
+  ![Addition HTML Validation errors](assets/images/documentation/html-error-2.webp)
 
-- I would like to acknowledge the help I recieved from Ed at Tutor Support. I reached out to Tutor Support as I was struggling to
-  figure out how to construct a function that checks to see when a score of 5 was reached, and that when the score was reached to display a message to the player that they have either won or lost the game. On my first attempt I had actually written code that was close to the end result. However my code never called the message to display when a score of 5 was achieved. After removing that code and re writting the playerVictory function trying different methods with still no success. I reached out to Tutor Support. After speaking with Ed and explaining what I wanted my function to achieve. He showed an example of how that function should look. After looking at the example Ed had sent. The difference between the example function and what I had first written, was that in my first attempt, I had written: if (playerScoreCounter = 5). This changed the set player score that was set at 0, at the top of the js script (var playerScoreCounter = 0;), to 5 which was incorrect.
+### Acknowledgements and Credits
+
+- I would like to acknowledge and credit the help I recieved from Ed at Tutor Support. I reached out to Tutor Support as I was struggling to
+  figure out how to construct a function that checks to see when a score of 5 was reached, and that when the score was reached to display a message to the player they had either won or lost the game. On my first attempt I had actually written code that was close to the end result. However my code never called the message to display when a score of 5 was achieved. After removing that code and re writting the playerVictory function trying different methods with still no success. I reached out to Tutor Support. After speaking with Ed and explaining what I wanted my function to achieve. He showed an example of how that function should look. After looking at the example Ed had sent. The difference between the example function and what I had first written, was that in my first attempt, I had written: if (playerScoreCounter = 5). This changed the set player score that was set at 0, at the top of the js script (var playerScoreCounter = 0;), to 5 which was incorrect.
 
 What should of been called was: if (playerScoreCounter === 5). Which checks the score once it reaches 5, and then call the rest of the function. I also initally had an initial issue with the function coming into action as where it was originally placed, as it was placed directly under the function playerVictory(). When discussing this issue with Ed, he advised that the newly re written function wasn't coming into being called as it placed incorrectly and that thought should be placed into where calling that function would serve it's purpose. Following a further discussion and a hint from Ed, I understood that the function should of been placed within the end of the game function. As that within this function, the player choice and computer choices was being checked to see which hand had won the round and assigning points. After the help and encouragement I recieved from Ed, I was able to understand how to carry that function forward with the additional calls, and allowed me to compose the cpuVictory function by myself.
+
+- Credit to Sarah from Tutor Support that helped guide myself through the initial and then follow up error message that was flagged in the HTML Validation.

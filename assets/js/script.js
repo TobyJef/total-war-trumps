@@ -39,7 +39,7 @@ function beginGame() {
             document.getElementById('hide-button').style.width = '110px';
         }
     }
-};
+}
 
 // Game card event listeners
 function battle() {
@@ -55,7 +55,7 @@ function battle() {
     cavalry.addEventListener('click', function () {
         game('cavalry');
     });
-};
+}
 
 battle();
 
@@ -65,7 +65,7 @@ function cpuCardPick() {
     const cpuChoices = ['archer', 'samurai', 'spearmen', 'cavalry'];
     const randomNumber = Math.floor(Math.random() * 4);
     return cpuChoices[randomNumber];
-};
+}
 
 // Player choice function
 // If win/loss/draw statements
@@ -105,7 +105,7 @@ function game(playerChoice) {
         battleOutcome('win', playerChoice, cpuChoice);
     }
     checkForVictory();
-};
+}
 
 // Acknowledgement of help with construct of the below code provided by my mentor Graeme Taylor.
 // Credit of code given to Graeme Taylor.
@@ -125,7 +125,7 @@ function battleOutcome(outcome, playerChoice, cpuChoice) {
     } else {
         resultMessage.innerHTML = `Both sides were evenly matched! The Shogun's ${cardNameConverter(playerChoice)} Stalemates The Daimyo's ${cardNameConverter(cpuChoice)}`;
     }
-};
+}
 
 // Acknowledgement of help with construct of the below code from Ed at Tutor Support.
 // Credit given to Ed.
@@ -151,7 +151,7 @@ function checkForVictory() {
         document.getElementById('spearmen-button').disabled = true;
         document.getElementById('cavalry-button').disabled = true;
     }
-};
+}
 
 // Round result message
 let resultMessage = document.getElementById('result-message');
@@ -162,7 +162,7 @@ function cardNameConverter(cardName) {
     if (cardName === 'samurai') return 'Samurai';
     if (cardName === 'spearmen') return 'Spearmen';
     if (cardName === 'cavalry') return 'Cavalry';
-};
+}
 
 // Replay game button
 function replayGame() {
@@ -175,4 +175,4 @@ function replayGame() {
     finalResult.innerHTML = '';
 
     console.log(playerScoreCounter);
-};
+}
