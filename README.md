@@ -51,7 +51,7 @@ Content
 
 - Following research into the traditional colours of ancient Japan, this has influenced my choice in using more muted and plain colours used within my styling.
 - The beige colour used throught the page for the main content was used to not clash with my used background image, and to focus the player towards the backstory, rules and game area. While allowing the more colourful aspect of the playing cards to stand out.
-- The white colour used for the score area and game outcome message was used to not only allow for clear visibility of the scores and the Victory or Defeat message depending on the outcome of the game. The colour white was historically in Japan by the Emporer of Japan in Shinto Rituals. While also in Buddhism, the colour white also means death, and white attributes have been used for the ritual samurai suicide called ‘seppuku’. This was also eluded to in the backstory element of the game as the ultimate punishment, if the player lost.
+- The white colour used for the score area and game outcome message was used to not only allow for clear visibility of the scores and the Victory or Defeat message depending on the outcome of the game. But to incluse some cultural referance also. The colour white was historically in Japan by the Emporer of Japan in Shinto Rituals. While also in Buddhism, the colour white also means death, and white attributes have been used for the ritual samurai suicide called ‘seppuku’. This was lightly eluded to in the backstory element of the game, as mentioned in the wording of the ultimate punishment, if the player lost. Important to note that neither myself or this game encourages or endorses the mentioned action. It is referred to as an educational and cultural norm that was reflected within that time period.
 
 [Symbolic Colours in Japan](https://en.japantravel.com/blog/symbolic-colors-in-japan/61005).
 
@@ -88,37 +88,43 @@ The validators used in the testing of the were:
   ![Desktop Lighthouse Score](assets/images/documentation/lighthouse-report-desktop.webp)
   ![Mobile Lighthouse Score](assets/images/documentation/lighthouse-report-mobile.webp)
 
-### Deployment and Development
+## Deployment, Forking and Cloning
+
+### Deployment
 
 - The site Total War: Trumps - Shogun Edition was deployed to Github pages.
 
 To deploy the live site on Github pages, the steps below are as follows:
 
-Login into Github.
-Go into the repository for this project, (https://github.com/TobyJef/total-war-trumps)
-Click the settings button located on the upper navigation bar.
-Locate and select pages from the Code and automation section of the left hand navigation menu.
-From the Branch dropdown box, select Main and press save.
-Following a short delay, the deployment will have been completed and the page provides a link to the completed website.
-The live link can be found below:
-[Link to the live Total War: Trumps website](https://tobyjef.github.io/total-war-trumps/)
+- Login into Github.
+- Go into the repository for this project, (https://github.com/TobyJef/total-war-trumps)
+- Click the Settings button located on the upper navigation bar.
+  ![Settings](assets/images/documentation/repository-settings.webp)
+- Locate and select Pages from the Code and automation section of the left hand navigation menu.
+  ![Pages](assets/images/documentation/repository-pages.webp)
+  From the Branch dropdown box, select Main and press save.
+  ![Deployment](assets/images/documentation/repository-deployment.webp)
+- Following a short delay, the deployment will have been completed and the page provides a link to the completed website.
+- The live link can be found below:
+  [Link to the live Total War: Trumps website](https://tobyjef.github.io/total-war-trumps/)
 
-Local Development
+### Forking and Cloning
 
-To fork the repository:
+- How to Fork the repository:
 
-Log into Github.
-Go to the repository for this project, (https://github.com/TobyJef/total-war-trumps)
-Click the Fork button in the top right corner.
+- Log into Github.
+- Go to the repository for this project, (https://github.com/TobyJef/total-war-trumps)
+- Click the Fork button found on the right of the page underneath the upper navigation bar.
+  ![Forking](assets/images/documentation/repository-forking.webp)
 
-How to Clone
-To clone the repository:
+- How to Clone the repository:
 
-Log in (or sign up) to GitHub.
-Go to the repository for this project, kera-cudmore/TheQuizArms
-Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
-Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
-Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+- Log into GitHub.
+- Go to the repository for this project, (https://github.com/TobyJef/total-war-trumps)
+- Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+  [Cloning](assets/images/documentation/repository-cloning.webp)
+- Open a terminal in your code editor type 'git clone' into the terminal and then paste the link you copied from the Github repository. Press enter to change the current working directory to the location you want to use for the cloned directory.
+  [Github Terminal](assets/images/documentation/github-clone.webp)
 
 ### Bugs
 
