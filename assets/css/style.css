@@ -168,19 +168,13 @@ button {
 
 /* Media Queries */
 
-
 /* Smallest mobile screens */
 
 @media screen and (max-width: 320px) {
-    /* 
     #logo-box {
         max-width: 95%;
         font-size: 14px;
         height: 70px;
-    }
-
-    .logo {
-        display: none;
     }
 
     #story-box {
@@ -206,131 +200,143 @@ button {
     #final-result {
         font-size: 1.4rem;
     }
-} */
+}
 
-    /* Smaller mobile screens */
+/* Smaller mobile screens */
 
-    /* @media screen and (min-width: 359px) { */
-    /* .logo {
-        display: none;
-    }
+@media screen and (min-width: 359px) {}
 
-    .warrior-name {
-        display: hidden;
-    }
-} */
+/* Smaller Tablets */
 
-    /* Smaller Tablets */
-
-    /* @media screen and (min-width: 600px) { */
-    /* #logo-box {
-        font-size: 18px;
+@media screen and (min-width: 600px) {
+    #logo-box {
+        font-size: 1rem;
         height: 50px;
     }
 
-    .logo {
-        display: none;
-    }
-} */
-
-
-    /* Medium size Tablets on landscape view */
-
-    /* @media screen and (min-width: 768px) {
-                #logo-box {
-                    font-size: 18px;
-                    height: 50px;
-                    max-width: 95%
-                } */
-
-    /* .logo {
-        display: none;
-    } */
-
-
-    /* Larger Tablets on landscape view */
-
-    @media screen and (min-width: 960px) {
-
-        #logo-box {
-            max-width: 90%;
-            font-size: 15px;
-        }
-
-        #story-box {
-            max-width: 90%;
-            font-size: 1.1rem
-        }
-
-        #game-box {
-            max-width: 90%;
-            font-size: 1.1rem
-        }
-
-        #result-message {
-            max-width: 90%;
-            font-size: large
-        }
-
-        #score-box {
-            max-width: 90%;
-        }
+    #story-box {
+        max-width: 100%;
     }
 
-    /* Laptop/Monitor Screens */
-
-    @media screen and (min-width: 1180px) {
-
-        #logo-box {
-            max-width: 85%;
-            font-size: 18px;
-        }
-
-        #story-box {
-            max-width: 85%;
-            font-size: 1.1rem
-        }
-
-        #game-box {
-            max-width: 85%;
-            font-size: 1.1rem
-        }
-
-        #result-message {
-            max-width: 85%;
-            font-size: larger;
-        }
-
-        #score-box {
-            max-width: 85%;
-        }
+    #game-box {
+        height: 560px;
     }
 
-    /* Larger Laptop/Monitor Screens */
-
-    @media screen and (min-width: 1320px) {
-
-        #logo-box {
-            max-width: 85%;
-            font-size: 22px;
-        }
-
-        #story-box {
-            max-width: 85%;
-            font-size: 1.3rem;
-        }
-
-        #game-box {
-            max-width: 85%;
-            font-size: 1.2rem;
-        }
-
-        #result-message {
-            max-width: 85%;
-            font-size: larger;
-        }
-
-        #score-box {
-            max-width: 85%;
-        }
+    .warrior-name {
+        margin-bottom: 10px;
+        word-spacing: 65px;
     }
+
+    .selection {
+        width: 140px;
+        height: 1px;
+    }
+
+    #result-message {
+        font-weight: 500;
+    }
+
+    #score-box {
+        padding-bottom: 20px;
+    }
+}
+
+/* Medium size Tablets on landscape view */
+
+@media screen and (min-width: 768px) {
+    #logo-box {
+        font-size: 19px;
+        max-width: 90%
+    }
+
+    #story-box {
+        max-width: 90%;
+    }
+
+}
+
+/* Larger Tablets on landscape view */
+
+@media screen and (min-width: 960px) {
+
+    #logo-box {
+        max-width: 80%;
+        font-size: 22px;
+    }
+
+    #story-box {
+        max-width: 90%;
+        font-size: 1.2rem
+    }
+
+    #game-box {
+        max-width: 85%;
+        font-size: 1.2rem;
+    }
+
+    #result-message {
+        max-width: 85%;
+        font-size: large
+    }
+
+    #score-box {
+        max-width: 90%;
+    }
+}
+
+/* Laptop/Monitor Screens */
+
+@media screen and (min-width: 1180px) {
+
+    #logo-box {
+        max-width: 65%;
+        font-size: 22px;
+    }
+
+    #story-box {
+        max-width: 85%;
+        font-size: 1.1rem
+    }
+
+    #game-box {
+        max-width: 65%;
+        font-size: 1.1rem
+    }
+
+    #result-message {
+        max-width: 70%;
+        font-size: larger;
+    }
+
+    #score-box {
+        max-width: 85%;
+    }
+}
+
+/* Larger Laptop/Monitor Screens */
+
+@media screen and (min-width: 1320px) {
+    #logo-box {
+        max-width: 55%;
+        font-size: 22px;
+    }
+
+    #story-box {
+        max-width: 65%;
+        font-size: 1.3rem;
+    }
+
+    #game-box {
+        max-width: 65%;
+        font-size: 1.2rem;
+    }
+
+    #result-message {
+        max-width: 65%;
+        font-size: larger;
+    }
+
+    #score-box {
+        max-width: 65%;
+    }
+}
