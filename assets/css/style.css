@@ -14,7 +14,7 @@ body {
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    max-width: 70%;
+    max-width: 80%;
     background-color: beige;
     text-align: center;
     font-size: 22px;
@@ -62,11 +62,12 @@ body {
     box-sizing: border-box;
     background-color: beige;
     margin-top: 30px;
-    max-width: 75%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     border-radius: 60px;
+    font-size: 1.3rem;
 }
 
 /* Game area */
@@ -74,35 +75,21 @@ body {
 #game-box {
     box-sizing: border-box;
     background-color: beige;
-    max-width: 75%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
     border-radius: 60px;
     padding-top: 1px;
+    font-size: 1.2rem;
 }
 
 /* Game cards styling */
-
-/* .card-names {
-    background-color: white;
-} */
 
 .warrior-name {
     font-weight: bold;
     word-spacing: 75px;
     margin-bottom: 15px;
-}
-
-
-#warrior-box {
-    background-color: beige;
-    box-sizing: border-box;
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    border-radius: 4px;
 }
 
 .units {
@@ -137,7 +124,7 @@ button {
 
 #result-message {
     background-color: beige;
-    max-width: 60%;
+    max-width: 70%;
     height: 45px;
     margin-top: 60px;
     margin-left: auto;
@@ -153,7 +140,7 @@ button {
 #score-box {
     background-color: white;
     border: 2px solid black;
-    max-width: 75%;
+    max-width: 80%;
     box-sizing: border-box;
     margin: 20px auto;
     padding: 15px;
@@ -186,6 +173,91 @@ button {
     font-weight: bold;
 }
 
+
+/* Media Queries */
+
+/* Large Screens and Below */
+
+@media screen and (max-width: 1320px) {
+
+    #logo-box {
+        max-width: 85%;
+    }
+
+    #story-box {
+        max-width: 85%;
+    }
+
+    #game-box {
+        max-width: 85%;
+    }
+
+    #result-message {
+        max-width: 75%;
+    }
+
+    #score-box {
+        max-width: 85%;
+    }
+}
+
+
+@media screen and (max-width: 1245px) {
+
+    #logo-box {
+        max-width: 90%;
+    }
+
+    #story-box {
+        max-width: 90%;
+    }
+
+    #game-box {
+        max-width: 90%;
+    }
+
+    #result-message {
+        max-width: 80%;
+    }
+
+    #score-box {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1175px) {
+
+    #logo-box {
+        max-width: 85%;
+        font-size: 18px;
+    }
+
+    #story-box {
+        max-width: 85%;
+        font-size: 1.1rem
+    }
+
+    #game-box {
+        max-width: 85%;
+        font-size: 1.1rem
+    }
+
+    #result-message {
+        max-width: 75%;
+        font-size: large;
+    }
+
+    #score-box {
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 1097px) {
+    #logo-box {
+        font-size: 1rem;
+    }
+
+}
 
 /* background colour possibilities */
 /* cadetblue #5f9ea0 95,
