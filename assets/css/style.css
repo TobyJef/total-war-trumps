@@ -176,93 +176,10 @@ button {
 
 /* Media Queries */
 
-/* Larger Laptop/Monitor Screens */
 
-@media screen and (min-width: 1320px) {
+/* Smallest mobile screens */
 
-    #logo-box {
-        max-width: 85%;
-    }
-
-    #story-box {
-        max-width: 85%;
-    }
-
-    #game-box {
-        max-width: 85%;
-    }
-
-    #result-message {
-        max-width: 75%;
-    }
-
-    #score-box {
-        max-width: 85%;
-    }
-}
-
-/* Laptop/Monitor Screens */
-
-@media screen and (min-width: 1180px) {
-
-    #logo-box {
-        max-width: 85%;
-        font-size: 18px;
-    }
-
-    #story-box {
-        max-width: 85%;
-        font-size: 1.1rem
-    }
-
-    #game-box {
-        max-width: 85%;
-        font-size: 1.1rem
-    }
-
-    #result-message {
-        max-width: 75%;
-        font-size: large;
-    }
-
-    #score-box {
-        max-width: 85%;
-    }
-}
-
-
-/* Smaller Tablets on landscape viewing */
-
-@media screen and (min-width: 960px) {
-
-    #logo-box {
-        max-width: 90%;
-        font-size: 15px;
-    }
-
-    #story-box {
-        max-width: 90%;
-        font-size: 1.1rem
-    }
-
-    #game-box {
-        max-width: 90%;
-        font-size: 1.1rem
-    }
-
-    #result-message {
-        max-width: 80%;
-        font-size: large
-    }
-
-    #score-box {
-        max-width: 90%;
-    }
-}
-
-/* Small mobile screens */
-
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 320px) {
 
     #logo-box {
         max-width: 95%;
@@ -273,7 +190,6 @@ button {
     .logo {
         display: none;
     }
-
 
     #story-box {
         max-width: 95%;
@@ -324,18 +240,116 @@ button {
     }
 }
 
+/* Smaller mobile screens */
+
+@media screen and (min-width: 359px) {
+
+    .archers {
+        position: absolute;
+        bottom: 190px;
+        right: 238px;
+    }
 
 
-/* background colour possibilities */
-/* cadetblue #5f9ea0 95,
-158,
-160;
-steelblue #4682b4 70,
-130,
-180;
-lightsteelblue #b0c4de 176,
-196,
-222;
-cornflowerblue #6495ed 100,
-149,
-237; */
+    .swords {
+        position: absolute;
+        bottom: 190px;
+        right: 132px;
+    }
+
+    .spears {
+        position: absolute;
+        right: 125px;
+        bottom: -423px;
+    }
+
+    .horses {
+        position: absolute;
+        bottom: -680px;
+        right: 135px;
+    }
+
+}
+
+/* Smaller Tablets on landscape viewing */
+
+@media screen and (min-width: 960px) {
+
+    #logo-box {
+        max-width: 90%;
+        font-size: 15px;
+    }
+
+    #story-box {
+        max-width: 90%;
+        font-size: 1.1rem
+    }
+
+    #game-box {
+        max-width: 90%;
+        font-size: 1.1rem
+    }
+
+    #result-message {
+        max-width: 80%;
+        font-size: large
+    }
+
+    #score-box {
+        max-width: 90%;
+    }
+}
+
+/* Laptop/Monitor Screens */
+
+@media screen and (min-width: 1180px) {
+
+    #logo-box {
+        max-width: 85%;
+        font-size: 18px;
+    }
+
+    #story-box {
+        max-width: 85%;
+        font-size: 1.1rem
+    }
+
+    #game-box {
+        max-width: 85%;
+        font-size: 1.1rem
+    }
+
+    #result-message {
+        max-width: 75%;
+        font-size: large;
+    }
+
+    #score-box {
+        max-width: 85%;
+    }
+}
+
+/* Larger Laptop/Monitor Screens */
+
+@media screen and (min-width: 1320px) {
+
+    #logo-box {
+        max-width: 85%;
+    }
+
+    #story-box {
+        max-width: 85%;
+    }
+
+    #game-box {
+        max-width: 85%;
+    }
+
+    #result-message {
+        max-width: 75%;
+    }
+
+    #score-box {
+        max-width: 85%;
+    }
+}
