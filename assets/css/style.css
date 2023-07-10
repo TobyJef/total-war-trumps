@@ -176,9 +176,9 @@ button {
 
 /* Media Queries */
 
-/* Large Screens and Below */
+/* Larger Laptop/Monitor Screens */
 
-@media screen and (max-width: 1320px) {
+@media screen and (min-width: 1320px) {
 
     #logo-box {
         max-width: 85%;
@@ -201,31 +201,9 @@ button {
     }
 }
 
+/* Large Laptop/Monitor Screens */
 
-@media screen and (max-width: 1245px) {
-
-    #logo-box {
-        max-width: 90%;
-    }
-
-    #story-box {
-        max-width: 90%;
-    }
-
-    #game-box {
-        max-width: 90%;
-    }
-
-    #result-message {
-        max-width: 80%;
-    }
-
-    #score-box {
-        max-width: 90%;
-    }
-}
-
-@media screen and (max-width: 1175px) {
+@media screen and (min-width: 1180px) {
 
     #logo-box {
         max-width: 85%;
@@ -252,12 +230,36 @@ button {
     }
 }
 
-@media screen and (max-width: 1097px) {
+
+/* Smaller Tablets on Horizontal Viewing */
+
+@media screen and (min-width: 960px) {
+
     #logo-box {
-        font-size: 1rem;
+        max-width: 90%;
+        font-size: 15px;
     }
 
+    #story-box {
+        max-width: 90%;
+        font-size: 1.1rem
+    }
+
+    #game-box {
+        max-width: 90%;
+        font-size: 1.1rem
+    }
+
+    #result-message {
+        max-width: 80%;
+        font-size: large
+    }
+
+    #score-box {
+        max-width: 90%;
+    }
 }
+
 
 /* background colour possibilities */
 /* cadetblue #5f9ea0 95,
