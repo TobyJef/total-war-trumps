@@ -14,7 +14,6 @@ body {
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    max-width: 80%;
     background-color: beige;
     text-align: center;
     font-size: 22px;
@@ -62,12 +61,10 @@ body {
     box-sizing: border-box;
     background-color: beige;
     margin-top: 30px;
-    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     border-radius: 60px;
-    font-size: 1.3rem;
 }
 
 /* Game area */
@@ -75,13 +72,11 @@ body {
 #game-box {
     box-sizing: border-box;
     background-color: beige;
-    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
     border-radius: 60px;
     padding-top: 1px;
-    font-size: 1.2rem;
 }
 
 /* Game cards styling */
@@ -124,13 +119,11 @@ button {
 
 #result-message {
     background-color: beige;
-    max-width: 70%;
     height: 45px;
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 60px;
-    font-size: larger;
     font-weight: bold;
     padding-top: 15px;
 }
@@ -140,7 +133,6 @@ button {
 #score-box {
     background-color: white;
     border: 2px solid black;
-    max-width: 80%;
     box-sizing: border-box;
     margin: 20px auto;
     padding: 15px;
@@ -180,7 +172,7 @@ button {
 /* Smallest mobile screens */
 
 @media screen and (max-width: 320px) {
-
+    /* 
     #logo-box {
         max-width: 95%;
         font-size: 14px;
@@ -201,30 +193,6 @@ button {
         font-size: 1rem
     }
 
-    .archers {
-        position: absolute;
-        bottom: 95px;
-        right: 138px;
-    }
-
-    .swords {
-        position: absolute;
-        bottom: -165px;
-        right: 132px;
-    }
-
-    .spears {
-        position: absolute;
-        right: 125px;
-        bottom: -423px;
-    }
-
-    .horses {
-        position: absolute;
-        bottom: -680px;
-        right: 135px;
-    }
-
     #result-message {
         max-width: 95%;
         height: 60px;
@@ -238,118 +206,131 @@ button {
     #final-result {
         font-size: 1.4rem;
     }
-}
+} */
 
-/* Smaller mobile screens */
+    /* Smaller mobile screens */
 
-@media screen and (min-width: 359px) {
-
-    .archers {
-        position: absolute;
-        bottom: 190px;
-        right: 238px;
+    /* @media screen and (min-width: 359px) { */
+    /* .logo {
+        display: none;
     }
 
-
-    .swords {
-        position: absolute;
-        bottom: 190px;
-        right: 132px;
+    .warrior-name {
+        display: hidden;
     }
+} */
 
-    .spears {
-        position: absolute;
-        right: 125px;
-        bottom: -423px;
-    }
+    /* Smaller Tablets */
 
-    .horses {
-        position: absolute;
-        bottom: -680px;
-        right: 135px;
-    }
-
-}
-
-/* Smaller Tablets on landscape viewing */
-
-@media screen and (min-width: 960px) {
-
-    #logo-box {
-        max-width: 90%;
-        font-size: 15px;
-    }
-
-    #story-box {
-        max-width: 90%;
-        font-size: 1.1rem
-    }
-
-    #game-box {
-        max-width: 90%;
-        font-size: 1.1rem
-    }
-
-    #result-message {
-        max-width: 80%;
-        font-size: large
-    }
-
-    #score-box {
-        max-width: 90%;
-    }
-}
-
-/* Laptop/Monitor Screens */
-
-@media screen and (min-width: 1180px) {
-
-    #logo-box {
-        max-width: 85%;
+    /* @media screen and (min-width: 600px) { */
+    /* #logo-box {
         font-size: 18px;
+        height: 50px;
     }
 
-    #story-box {
-        max-width: 85%;
-        font-size: 1.1rem
+    .logo {
+        display: none;
+    }
+} */
+
+
+    /* Medium size Tablets on landscape view */
+
+    /* @media screen and (min-width: 768px) {
+                #logo-box {
+                    font-size: 18px;
+                    height: 50px;
+                    max-width: 95%
+                } */
+
+    /* .logo {
+        display: none;
+    } */
+
+
+    /* Larger Tablets on landscape view */
+
+    @media screen and (min-width: 960px) {
+
+        #logo-box {
+            max-width: 90%;
+            font-size: 15px;
+        }
+
+        #story-box {
+            max-width: 90%;
+            font-size: 1.1rem
+        }
+
+        #game-box {
+            max-width: 90%;
+            font-size: 1.1rem
+        }
+
+        #result-message {
+            max-width: 90%;
+            font-size: large
+        }
+
+        #score-box {
+            max-width: 90%;
+        }
     }
 
-    #game-box {
-        max-width: 85%;
-        font-size: 1.1rem
+    /* Laptop/Monitor Screens */
+
+    @media screen and (min-width: 1180px) {
+
+        #logo-box {
+            max-width: 85%;
+            font-size: 18px;
+        }
+
+        #story-box {
+            max-width: 85%;
+            font-size: 1.1rem
+        }
+
+        #game-box {
+            max-width: 85%;
+            font-size: 1.1rem
+        }
+
+        #result-message {
+            max-width: 85%;
+            font-size: larger;
+        }
+
+        #score-box {
+            max-width: 85%;
+        }
     }
 
-    #result-message {
-        max-width: 75%;
-        font-size: large;
+    /* Larger Laptop/Monitor Screens */
+
+    @media screen and (min-width: 1320px) {
+
+        #logo-box {
+            max-width: 85%;
+            font-size: 22px;
+        }
+
+        #story-box {
+            max-width: 85%;
+            font-size: 1.3rem;
+        }
+
+        #game-box {
+            max-width: 85%;
+            font-size: 1.2rem;
+        }
+
+        #result-message {
+            max-width: 85%;
+            font-size: larger;
+        }
+
+        #score-box {
+            max-width: 85%;
+        }
     }
-
-    #score-box {
-        max-width: 85%;
-    }
-}
-
-/* Larger Laptop/Monitor Screens */
-
-@media screen and (min-width: 1320px) {
-
-    #logo-box {
-        max-width: 85%;
-    }
-
-    #story-box {
-        max-width: 85%;
-    }
-
-    #game-box {
-        max-width: 85%;
-    }
-
-    #result-message {
-        max-width: 75%;
-    }
-
-    #score-box {
-        max-width: 85%;
-    }
-}
