@@ -173,6 +173,6 @@ function replayGame() {
     document.getElementById('cavalry-button').disabled = false;
     resultMessage.innerHTML = '';
     finalResult.innerHTML = '';
-
-    console.log(playerScoreCounter);
+    playerScore.innerHTML = resetPlayerScore;
+    cpuScore.innerHTML = resetCpuScore;
 }
