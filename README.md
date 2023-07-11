@@ -1,4 +1,4 @@
-# Total War: Trumps
+# Total War: Trumps - Shogun Edition
 
 ## Intro
 
@@ -54,15 +54,20 @@ Content
 - Logo image was further styled within CSS to round image into a circle.
 - ![Now unused Logo image](assets/images/site-images/logo.webp)
 
-- ![Background image used](assets/images/site-images/lone-warrior.webp)
+- Image found via Bing image search -[Link To in uses background image](https://wallpaper-mania.com/post/wallpaper-id-777000397879/)
+
+- Did not use original choice of background image, due to poor pixalation on screens.
 
 ## Page style decisions
 
+- Page layout was designed without out the use of tools such as Balsamic Wireframes. Page layout out was created from my own instinctive design of how I wanted the page to appear.
 - Following research into the traditional colours of ancient Japan, this has influenced my choice in using more muted and plain colours used within my styling.
 - The beige colour used throught the page for the main content was used to not clash with my used background image, and to focus the player towards the backstory, rules and game area. While allowing the more colourful aspect of the playing cards to stand out.
 - The white colour used for the score area and game outcome message was used to not only allow for clear visibility of the scores and the Victory or Defeat message depending on the outcome of the game. But to incluse some cultural referance also. The colour white was historically in Japan by the Emporer of Japan in Shinto Rituals. While also in Buddhism, the colour white also means death, and white attributes have been used for the ritual samurai suicide called ‘seppuku’. This was lightly eluded to in the backstory element of the game, as mentioned in the wording of the ultimate punishment, if the player lost. Important to note that neither myself or this game encourages or endorses the mentioned action. It is referred to as an educational and cultural norm that was reflected within that time period.
+  [Symbolic Colours in Japan](https://en.japantravel.com/blog/symbolic-colors-in-japan/61005).
 
-[Symbolic Colours in Japan](https://en.japantravel.com/blog/symbolic-colors-in-japan/61005).
+- The used background image was found through a Bing image search. It's design was perfect for use for the Total War: Trumps - Shogun Edition as it depicts some of the units used in the game, from a similar time period, heading into battle.
+  ![Background image](assets/images/site-images/new-bg1.webp)
 
 ## Who will play Total War: Trumps
 
@@ -70,7 +75,7 @@ Content
 
 ## Future Improvements
 
-- For a future update it would be my goal to add more units, adding further complexity to the game.
+- For a future update it would be my goal to add more units, i.e. Muskateers and re working the win/loss logic argument within the game. Hopefully to possibly reduce the amount of drawn rounds when using four cards and adding further complexity to the game.
 - I would also like to include a drop down option, allowing players to change the time period and the in game units.
   i.e. A Roman Empire update, Roman Urban Cohorts taking place of Sword Samurai, etc.
   ![New Units](assets/images/documentation/roman-units.webp)
@@ -151,14 +156,14 @@ To deploy the live site on Github pages, the steps below are as follows:
 - An error shown in the conole section of the developer tools on the FireFox Browser when viewing the page via the workspace. Does not effect the sites performance in any way. Same error message is not shown when using the developer tools through multiple borswers on the live site.
 - ![Console error](assets/images/documentation/console-bug.webp)
 
+- An issue with the Favicon image not displaying on the live site tab. Resource to bug fix provided by Mentor during Project review. Unresolved due to time.
+  [Link to the Favicon fix used](https://sneha-herle.medium.com/favicon-working-on-localhost-but-not-on-github-pages-6c7b9e947504)
+
 ### Resolved Bugs
 
 - During initial HTML Validation an error returned on a Charset attribute on a Meta element. After reaching out to Sarah at Tutor Support, Sarah explained why that issue had occured. I was informed that the error occured because I submitted the working URL from the Github workspace and not the URL from the Live Site. Sarah also informed me that after she had checked the Live Site Url there was further errors discovered by the validator. These were down to elements having seperate multiple class names being assigned to them. Once those class elements were combined and the URL from the Live Site was resubmitted for validation. All checks returned clear.
   ![Inital HTML Validation error](assets/images/documentation/html-error-1.webp)
   ![Addition HTML Validation errors](assets/images/documentation/html-error-2.webp)
-
-- An issue with the Favicon image not displaying on the live site tab. Resource to bug fix provided by Mentor during Project review.
-  [Link to the Favicon fix used](https://sneha-herle.medium.com/favicon-working-on-localhost-but-not-on-github-pages-6c7b9e947504)
 
 ### Media Screen sizes
 
@@ -168,12 +173,12 @@ To deploy the live site on Github pages, the steps below are as follows:
 ![Desktop Display Game Area](assets/images/documentation/media-large-game.webp)
 
 - Tablet
-
-![Tablet Display Game Area](assets/images/documentation/media-tablet-game.webp)
+  ![Tablet Display Home Area](assets/images/documentation/media-tablet-home.webp)
+  ![Tablet Display Game Area](assets/images/documentation/media-tablet-game.webp)
 
 - Mobile
-
-![Mobile Display Game Area](assets/images/documentation/media-phone-game.webp)
+  ![Mobile Display Home Area](assets/images/documentation/media-phone-home.webp)
+  ![Mobile Display Game Area](assets/images/documentation/media-phone-game.webp)
 
 ### Acknowledgements and Credits
 
@@ -183,3 +188,7 @@ To deploy the live site on Github pages, the steps below are as follows:
 
 - Credit to my Mentor Graeme Taylor in his support and guidence over this project. Graeme helped to reduce the overall amount of JavaScript by combining three variable into one function. This allowed the construction of a three layered if and else if statement for count the scores and display a win/loss message. Also for providing material with how to fix an issues with Favicon image not appearing in the live sites tab.
   [Link to the Favicon fix used](https://sneha-herle.medium.com/favicon-working-on-localhost-but-not-on-github-pages-6c7b9e947504)
+
+### Final Commit
+
+- The final commit before submission took place on the morning of 11/07/23.
