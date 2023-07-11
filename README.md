@@ -6,10 +6,9 @@ Total War Trumps is a game based on the classic game of Rock, Paper, Scissors. B
 
 Similar in logic to Rock, Paper, Scissors where Rock beats Scissors, Scissors beats Paper and Paper beats Rock. Total War: Trumps, works on the same logic of comparing strengths and weaknesses.
 
-In this game, the units consist of Archers, Samurai, Yari Spearmen and Cavalry.
-Archers trump Samurai, Samurai trump Yari Spearmen, Yari Spearmen trump Cavalry and finally Cavalry trumps Archers.
-While Archers against Spearmen and Samurai against Cavalry will result in a draw, which results in no points being awarded.
-
+In this game, the units consist of Archers, Samurai, Spearmen and Cavalry.
+Archers trump Samurai, Samurai trump Spearmen, Spearmen trump Cavalry and finally Cavalry trumps Archers.
+While Archers against Spearmen and also Samurai against Cavalry will result in a draw, which results in no points being awarded.
 [Link to the live Total War: Trumps website](https://tobyjef.github.io/total-war-trumps/)
 
 ## Features
@@ -17,18 +16,24 @@ While Archers against Spearmen and Samurai against Cavalry will result in a draw
 - On page load you are met with the games rules, objective and backstory. Below sits a button inviting them to begin the game. Upon clicking the button the backstory and rules overview content disappear to reveal the game with short reminder on how to win. Due to the differences between the standard and well known Rock, Paper, Scissors game that this game is based on.
   ![Total War: Trumps Homepage](assets/images/documentation/homepage.webp)
 
-- insert screenshot of rules-box with button and hidden game area content here..
+- By clicking the Begin Campaign button, that triggers a click event within the JavaScript to reveal the previously hidden game area, whilst in turn hiding the previous text content featuring the games back story and rules.
+  ![Game Area](assets/images/documentation/game-page.webp)
 
-- The game area consists of three blocks of content. The main game area, consists of;
+- A reminder on how to win at Total War: Trumps shows at the top, above the four game cards the player has to choose from.
+- The options for those playing consist of an Archer card, a Samurai card, a Spearmen card and a Cavalry card. I have styled the game cards to scale upwards to 1.1 of the orignal image size to help identify which game card the user is hovering over.
+  ![Player card scale increase](assets/images/documentation/card-transform.webp)
 
-- The reminder on how to win at Total War: Trumps at the top. Below shows the four game cards the player has to choose from.
-- These options for those playing are an Archer card, a Samurai card, a Spearmen card and a Cavalry card. I have styled the game cards to scale upwards to 1.1 of the orignal image size to help identify which game card the user is hovering over.
+- Below the main game are is a text box with the purpose of displaying in the event of a player winning the round the
+  Glorious Victory! message to the player or the Shameful Defeat! message if the player has lost to the cpu opponent, as well as message informing of a draw. This text box also tells the player of which card they have played and also of the cpu's choice.
+  ![Player wins round](assets/images/documentation/round-win.webp)
+  ![Player lost round](assets/images/documentation/round-loss.webp)
+  ![Round drawn](assets/images/documentation/round-draw.webp)
 
-- Below the main game are is a small text box with the purpose of displaying the Glorious Victory! message to the player if the win or the Shameful Defeat! message if the player has lost to the cpu opponent. Following either the win or loss message there is a short message that informs the player of each card that was played in that round.
+- There is the score tally box which shows the player and cpu score. The score correctly increments automatically at the end of each round and awards a point to the respective winner. Once the desired score has been reached, a new message will appear informing wether the player had won or lost the full game. The win message to the player is shown in green, while the loss message is displayed in red. These colours were chosen as they can be associated with positive (green) or negative (red) outcomes.
+  ![Player wins the game](assets/images/documentation/victory-message.webp)
+  ![Player looses the game](assets/images/documentation/defeat-message.webp)
 
-- There is the score tally box which shows the player and cpu score. The score correctly increments automatically at the end of each hand and awards a point to the respective winner. Once the desired score has been reached, a new message will appear informing wether the player had won or lost the full game. The win message to the player is shown in green, while the loss message is displayed in red. These colours were chosen as they can be associated with positive (green) or negative (red) actions.
-
-- A play again button is added which resets the scores to 0-0 and clears the previous games text content to allow the player to play again, from within the main game page. However due to a still unfixed bug, as a work around it is advised to refresh the page to play again. More detail is found within the bugs section of the README.
+- A play again button will then appear at the end of the game, which is designed to reset the scores to 0-0 and clears the previous games text content to allow the player to play again, from within the main game page. However due to a still unfixed bug, as a work around it is advised to refresh the page to play again. More detail is found within the bugs section of the README.
 
 ## Technologies Used
 
@@ -40,12 +45,16 @@ Content
 
 ## Images
 
-- Game unit images taken by screenshot, from my personal copy of Total War: Shogun 2
+- Game unit images taken by screenshot, from my personal copy of Total War: Shogun 2.
+
+- Crossed sword image found via Bing image search.
 - [Favicon image](https://www.favicon-generator.org/)
-- Crossed sword image found via Bing image search
-- Logo image found and saved from Shutterstock
-- Background image found
-- [Link for image]()
+
+- Logo image found and saved from Shutterstock.
+- Logo image was further styled within CSS to round image into a circle.
+- ![Now unused Logo image](assets/images/site-images/logo.webp)
+
+- ![Background image used](assets/images/site-images/lone-warrior.webp)
 
 ## Page style decisions
 
@@ -87,7 +96,8 @@ The validators used in the testing of the were:
 - JavaScript Validator - Validation passed with no errors or warnings found.
   ![JavaScript Validation Check Pass](assets/images/documentation/javascript-validation.webp)
 
-- Lighthouse report score - Performance, Accessibility, Best Practices and SEO all rated at 100% when tested for Desktop. - Performance rated at 97%, Accessibility, Best Practices and SEO all rated at 100% when tested for Mobile.
+- Lighthouse report score - Performance, Accessibility, Best Practices and SEO all rated at 100% when tested for Desktop.
+- Performance rated at 97%, Accessibility, Best Practices and SEO all rated at 100% when tested for Mobile.
   ![Desktop Lighthouse Score](assets/images/documentation/lighthouse-report-desktop.webp)
   ![Mobile Lighthouse Score](assets/images/documentation/lighthouse-report-mobile.webp)
 
@@ -125,30 +135,51 @@ To deploy the live site on Github pages, the steps below are as follows:
 - Log into GitHub.
 - Go to the repository for this project, (https://github.com/TobyJef/total-war-trumps)
 - Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
-  [Cloning](assets/images/documentation/repository-cloning.webp)
+  ![Cloning](assets/images/documentation/repository-cloning.webp)
 - Open a terminal in your code editor type 'git clone' into the terminal and then paste the link you copied from the Github repository. Press enter to change the current working directory to the location you want to use for the cloned directory.
-  [Github Terminal](assets/images/documentation/github-clone.webp)
+  ![Github Terminal](assets/images/documentation/github-clone.webp)
 
-### Bugs
+## Bugs
 
-- The main bug and one that is still to be resolved stems from JavaScript function named replayGame. Although the core purpose of the play again button and replayGame function succeeds in resetting the score and previous games outcome text. When the replayGame function is called into action which is linked to the click event of the play again button, a number of unusual and currently undiagnosed outcomes occur at the end of the first round that involve the final outcome message and the score counters functionality. If the next round played if the results is a draw
+### Unresolved Bugs
+
+- The main bug and one that is still to be resolved stems from JavaScript function named replayGame. Although the core purpose of the play again button and replayGame function succeeds in resetting the score and previous games outcome text. When the replayGame function is called into action which is linked to the click event of the play again button, a number of unusual and currently undiagnosed outcomes occur at the end of the first round that involve the final outcome message and the score counters functionality. If the next round played if the results in a player winning two back to back rounds the score will increase from one to 6. If the result is a draw, either the final Victory or Defeat message is displayed. I presume that the last bug is the result of the player loosing after the reset as the final Defeat message is displayed and the game cards become disabled.  
   ![Reset game round draw bug](assets/images/documentation/reset-bug.webp)
   ![Reset game round win bug](assets/images/documentation/reset-win-bug.webp)
   ![Unknown reset game bug](assets/images/documentation/unknown-reset-bug.webp)
+
+- An error shown in the conole section of the developer tools on the FireFox Browser when viewing the page via the workspace. Does not effect the sites performance in any way. Same error message is not shown when using the developer tools through multiple borswers on the live site.
+- ![Console error](assets/images/documentation/console-bug.webp)
+
+### Resolved Bugs
 
 - During initial HTML Validation an error returned on a Charset attribute on a Meta element. After reaching out to Sarah at Tutor Support, Sarah explained why that issue had occured. I was informed that the error occured because I submitted the working URL from the Github workspace and not the URL from the Live Site. Sarah also informed me that after she had checked the Live Site Url there was further errors discovered by the validator. These were down to elements having seperate multiple class names being assigned to them. Once those class elements were combined and the URL from the Live Site was resubmitted for validation. All checks returned clear.
   ![Inital HTML Validation error](assets/images/documentation/html-error-1.webp)
   ![Addition HTML Validation errors](assets/images/documentation/html-error-2.webp)
 
+- An issue with the Favicon image not displaying on the live site tab. Resource to bug fix provided by Mentor during Project review.
+  [Link to the Favicon fix used](https://sneha-herle.medium.com/favicon-working-on-localhost-but-not-on-github-pages-6c7b9e947504)
+
 ### Media Screen sizes
+
+- Desktop
+
+![Desktop Display Home Area](assets/images/documentation/media-large-home.webp)
+![Desktop Display Game Area](assets/images/documentation/media-large-game.webp)
+
+- Tablet
+
+![Tablet Display Game Area](assets/images/documentation/media-tablet-game.webp)
+
+- Mobile
+
+![Mobile Display Game Area](assets/images/documentation/media-phone-game.webp)
 
 ### Acknowledgements and Credits
 
-- I would like to acknowledge and credit the help I recieved from Ed at Tutor Support. I reached out to Tutor Support as I was struggling to
-  figure out how to construct a function that checks to see when a score of 5 was reached, and that when the score was reached to display a message to the player they had either won or lost the game. On my first attempt I had actually written code that was close to the end result. However my code never called the message to display when a score of 5 was achieved. After removing that code and re writting the playerVictory function trying different methods with still no success. I reached out to Tutor Support. After speaking with Ed and explaining what I wanted my function to achieve. He showed an example of how that function should look. After looking at the example Ed had sent. The difference between the example function and what I had first written, was that in my first attempt, I had written: if (playerScoreCounter = 5). This changed the set player score that was set at 0, at the top of the js script (var playerScoreCounter = 0;), to 5 which was incorrect.
+- I would like to acknowledge and credit the help I recieved from Ed at Tutor Support. I reached out to Tutor Support as I was struggling to figure out how to construct a function that checked to see, that when a score of 5 was reached, and to display a message to the player informing them, that they had either won or lost the overall game. After speaking with Ed and explaining what I wanted my function to achieve. He walked me through an example of how that function could look. I also initally had an issue with the function then being called, after further conversation I had incorrectly placed the call outside of the function. After the help and encouragement I recieved from Ed, I was able to better understand how to carry that function forward, and it allowed me to compose the following cpuVictory function by myself.
 
-What should of been called was: if (playerScoreCounter === 5). Which checks the score once it reaches 5, and then call the rest of the function. I also initally had an initial issue with the function coming into action as where it was originally placed, as it was placed directly under the function playerVictory(). When discussing this issue with Ed, he advised that the newly re written function wasn't coming into being called as it placed incorrectly and that thought should be placed into where calling that function would serve it's purpose. Following a further discussion and a hint from Ed, I understood that the function should of been placed within the end of the game function. As that within this function, the player choice and computer choices was being checked to see which hand had won the round and assigning points. After the help and encouragement I recieved from Ed, I was able to understand how to carry that function forward with the additional calls, and allowed me to compose the cpuVictory function by myself.
+- Credit to Sarah from Tutor Support that helped guide myself through the initial and then follow up error message that was flagged in the HTML Validation. As previously mentioned within the bugs section.
 
-- Credit to Sarah from Tutor Support that helped guide myself through the initial and then follow up error message that was flagged in the HTML Validation.
-
-- Credit to my Mentor Graeme Taylor in his support and guidence over this project. Graeme helped to reduce the overall amount of JavaScript by combining three variable into one function. This allowed the construction of a three layered if and else if statement for count the scores and display a win/loss message.
+- Credit to my Mentor Graeme Taylor in his support and guidence over this project. Graeme helped to reduce the overall amount of JavaScript by combining three variable into one function. This allowed the construction of a three layered if and else if statement for count the scores and display a win/loss message. Also for providing material with how to fix an issues with Favicon image not appearing in the live sites tab.
+  [Link to the Favicon fix used](https://sneha-herle.medium.com/favicon-working-on-localhost-but-not-on-github-pages-6c7b9e947504)
