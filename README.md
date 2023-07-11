@@ -26,9 +26,9 @@ While Archers against Spearmen and Samurai against Cavalry will result in a draw
 
 - Below the main game are is a small text box with the purpose of displaying the Glorious Victory! message to the player if the win or the Shameful Defeat! message if the player has lost to the cpu opponent. Following either the win or loss message there is a short message that informs the player of each card that was played in that round.
 
-- Finally there is the score tally box which shows the player and cpu score. The score correctly increments automatically at the end of each hand and awards a point to the respective winner. Once the desired score has been reached, a new message will appear informing wether the player had won or lost the full game. The win message to the player is shown in green, while the loss message is displayed in red. These colours were chosen as they can be associated with positive (green) or negative (red) actions.
+- There is the score tally box which shows the player and cpu score. The score correctly increments automatically at the end of each hand and awards a point to the respective winner. Once the desired score has been reached, a new message will appear informing wether the player had won or lost the full game. The win message to the player is shown in green, while the loss message is displayed in red. These colours were chosen as they can be associated with positive (green) or negative (red) actions.
 
-- A seperate button is added (to be implemented) which is designed to reset the scores to 0-0 and allow the player to play again.
+- A play again button is added which resets the scores to 0-0 and clears the previous games text content to allow the player to play again, from within the main game page. However due to a still unfixed bug, as a work around it is advised to refresh the page to play again. More detail is found within the bugs section of the README.
 
 ## Technologies Used
 
@@ -64,7 +64,10 @@ Content
 - For a future update it would be my goal to add more units, adding further complexity to the game.
 - I would also like to include a drop down option, allowing players to change the time period and the in game units.
   i.e. A Roman Empire update, Roman Urban Cohorts taking place of Sword Samurai, etc.
+  ![New Units](assets/images/documentation/roman-units.webp)
 - Redesign and re apply the logo I had intended to use originally either side of the page title. During media queries and resizing it became to small to use on anthing smaller than a laptop screen.
+  ![Improved page design](assets/images/documentation/improved-webpage.webp)
+- To fix the replayGame function bug as mentioned within the features and bugs section.
 
 ## Testing
 
@@ -81,8 +84,8 @@ The validators used in the testing of the were:
 - CSS Validator - Validation passed with no errors found.
   ![CSS Validation Check Pass](assets/images/documentation/css-validation.webp)
 
-- JavaScript Validator - Validation passed.
-  ![JavaScript Validation Check Pass]()
+- JavaScript Validator - Validation passed with no errors or warnings found.
+  ![JavaScript Validation Check Pass](assets/images/documentation/javascript-validation.webp)
 
 - Lighthouse report score - Performance, Accessibility, Best Practices and SEO all rated at 100% when tested for Desktop. - Performance rated at 97%, Accessibility, Best Practices and SEO all rated at 100% when tested for Mobile.
   ![Desktop Lighthouse Score](assets/images/documentation/lighthouse-report-desktop.webp)
@@ -128,11 +131,16 @@ To deploy the live site on Github pages, the steps below are as follows:
 
 ### Bugs
 
-- Hide/Reveal content button issues.
+- The main bug and one that is still to be resolved stems from JavaScript function named replayGame. Although the core purpose of the play again button and replayGame function succeeds in resetting the score and previous games outcome text. When the replayGame function is called into action which is linked to the click event of the play again button, a number of unusual and currently undiagnosed outcomes occur at the end of the first round that involve the final outcome message and the score counters functionality. If the next round played if the results is a draw
+  ![Reset game round draw bug](assets/images/documentation/reset-bug.webp)
+  ![Reset game round win bug](assets/images/documentation/reset-win-bug.webp)
+  ![Unknown reset game bug](assets/images/documentation/unknown-reset-bug.webp)
 
 - During initial HTML Validation an error returned on a Charset attribute on a Meta element. After reaching out to Sarah at Tutor Support, Sarah explained why that issue had occured. I was informed that the error occured because I submitted the working URL from the Github workspace and not the URL from the Live Site. Sarah also informed me that after she had checked the Live Site Url there was further errors discovered by the validator. These were down to elements having seperate multiple class names being assigned to them. Once those class elements were combined and the URL from the Live Site was resubmitted for validation. All checks returned clear.
   ![Inital HTML Validation error](assets/images/documentation/html-error-1.webp)
   ![Addition HTML Validation errors](assets/images/documentation/html-error-2.webp)
+
+### Media Screen sizes
 
 ### Acknowledgements and Credits
 
